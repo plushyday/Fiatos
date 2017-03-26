@@ -1,0 +1,83 @@
+$secolor:#F1D302;
+body{
+	background-color:#f5f6f5;
+}
+
+path{
+       shape-rendering: geometricPrecision;
+      }
+.logo{
+	float: left;
+	&:hover{
+		.st3{
+			fill:#57A773;
+		}
+	}
+  svg{
+    width: 200px;
+      
+    }
+   a {
+    text-decoration: none;
+  }
+}
+.header-right{
+	float: right;
+}
+.catalogue {
+  float: left;
+  margin-top: 10px;
+  font-size: 1.5em;
+  color: #fff;
+  background-color: #31708f;
+  padding: 6px 20px;
+  text-decoration: none;
+  margin-right: 20px;
+  &:hover {
+    background-color: $secolor;
+    color: #000;
+    text-decoration: none;
+  }
+}
+.menu-node:not(.active) {
+  float: left;
+  line-height: 1.5;
+  margin-top: 16px;
+  margin-right: 20px;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 1.4em;
+  color: #6D6D6D;
+  &:hover{
+  	color: darken($secolor,10%);
+  }
+}
+#shop_basket{
+	.bask0{
+		fill:#f5f6f5;
+	}
+}
+#shop_basket:hover{
+	.bask0{
+		fill:lighten($secolor, 30%);
+	}
+}
+#shop_basket, #magnifier{
+	width: 40px;
+}
+#magnifier:hover{
+	.magn0{
+		fill: $secolor;
+	}
+}
+form[role='search']{
+	float: left;
+	input{
+		border: none;
+		font-size: 1.5em;
+    	padding: 6px 20px;
+    	margin-top: 10px;
+    	margin-right: 20px;
+
+	}
+}
