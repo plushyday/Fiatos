@@ -61,6 +61,7 @@ path {
   width: 40px; }
 
 #magnifier {
+  outline: none;
   margin-left: -15px; }
   #magnifier .magn0 {
     -webkit-transition: all 0.4s ease-in-out;
