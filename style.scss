@@ -1,4 +1,5 @@
 $secolor:#F1D302;
+$fircolor:#31708f;
 body{
   background-color:#f5f6f5;
 }
@@ -32,12 +33,12 @@ path{
   margin-top: 10px;
   font-size: 1.5em;
   color: #fff;
-  background-color: #31708f;
+  background-color: $fircolor;
   padding: 6px 20px;
   text-decoration: none;
   margin-right: 20px;
-  -webkit-transition:all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+  -webkit-transition:all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
   &:hover {
     background-color: $secolor;
     color: #000;
@@ -53,17 +54,17 @@ path{
   cursor: pointer;
   font-size: 1.4em;
   color: #6D6D6D;
-  -webkit-transition:all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+  -webkit-transition:all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
   &:hover{
-    color: darken($secolor,10%);
+    color: $secolor;
   }
 
 }
 #shop_basket{
   .bask0{
-    -webkit-transition:all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
+    -webkit-transition:all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
     fill:#f5f6f5;
   }
 }
@@ -76,11 +77,11 @@ path{
   width: 40px;
 }
 #magnifier{
-	outline: none;
+  outline: none;
   margin-left:-15px;
   .magn0{
-    -webkit-transition:all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
+    -webkit-transition:all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
   }
   &:hover{
     .magn0{
@@ -93,6 +94,7 @@ path{
   &.activate-search{
     input{
       width: 300px;
+      outline: none;
       padding: 6px 20px;
       -webkit-transition:all 200ms ease;
       transition: all 200ms ease;
@@ -109,4 +111,61 @@ path{
     transition: all 200ms ease;
   }
 }
+
+.categories{
+  a{
+     text-decoration: none;
+  }
+}
+  .categories-border {
+    border: 1px solid #e7eaed;
+    margin-top: 20px;
+      .categories-layout {
+        background: #fbfbfb;
+          margin: 5px;
+          padding: 20px 0;
+          transition: 0.5s all;
+          -webkit-transition: 0.5s all;
+          -moz-transition: 0.5s all;
+          -o-transition: 0.5s all;
+          -ms-transition: 0.5s all;
+          text-align: center;
+          cursor: pointer;
+            svg {
+              width: 60%;
+               .svg-background {
+                  fill:darken($fircolor,15%);
+                }
+                .svg-img{
+                fill:#fff;
+                stroke:#fff;
+              }
+            }
+            .categories-h4{
+              margin: 0 0 0 0;
+              text-decoration: none;
+              color: #4C4C4C;
+              font-size: 18px;
+              text-align: center;
+              height: 35px;
+              margin-top: 20px;
+            }
+          &:hover{
+            background-color:#2E6171;
+              .svg-background {
+                  fill:#fff;
+               }
+              .svg-img{
+                fill:#000;
+                stroke:#000;
+              }
+              .categories-h4{
+                color: #fff;
+              }
+
+          }
+      }
+  }
+  
+ 
 @import "_slider.scss";

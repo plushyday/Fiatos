@@ -1,6 +1,5 @@
 .slider-container{
-  background: #F7F5E6;
-  height: 400px;
+  height: 340px;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -49,6 +48,8 @@
 
 .slide_buttons {
   left: 0;
+  top: 360px;
+  z-index: 100;
   position: absolute;
   right: 0;
   text-align: center;

@@ -103,5 +103,63 @@ $.each($slides, function(index) {
 });
 
 //SLIDER END
+
+//RANDOM COLOR
+var obj={
+	"0":"rgb(221,9,8)",
+	"1":"rgb(255,158,41)",
+	"2":"rgb(63,183,210)",
+	"3":"rgb(21,192,28)",
+	"4":"rgb(126,59,7)",
+	"5":"rgb(25,99,206)",
+	"6":"rgb(193,25,206)",
+	"7":"rgb(127,186,216)",
+	"8":"rgb(121,117,150)",
+	"9":"rgb(255,204,255)",
+	"10":"rgb(7,12,31)",
+	"11":"rgb(0,82,94)",
+	"12":"rgb(84,35,68)",
+	"13":"rgb(113,180,141)",
+	"14":"rgb(94,84,142)",
+	"15":"rgb(56,97,80)",
+	"16":"rgb(92,109,112)",
+	"17":"rgb(112,101,99)"
+}
+
+function randomInteger(min, max) {
+    var rand = min - 0.5 + Math.random() * (max - min + 1)
+    rand = Math.round(rand);
+    return rand;
+}
+
+var svgcolor = $(".svg-background")
+
+//замыкания
+
+function createColor(){
+
+}
+
+svgcolor.each(function callbackcolor(index, element){
+
+	var rand=randomInteger(0,17);
+	var randcolor = obj[rand];
+again: 
+for (var i=0; i<svgcolor.length; i++)
+		{
+		if(svgcolor.eq(i).css("fill")==randcolor)
+				{
+			rand=randomInteger(0,17);
+			randcolor = obj[rand];
+			break again;
+			}
+		};
+	$(this).css("fill",randcolor);
+	
+});
+
+// $.each(svgcolor, function())
+// $(".svg-background").css("fill", randcolor);
+//RANDOM COLOR END
 })
 
