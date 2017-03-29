@@ -38,7 +38,7 @@ path {
 .menu-node:not(.active) {
   float: left;
   line-height: 1.5;
-  margin-top: 16px;
+  margin-top: 20px;
   margin-right: 20px;
   box-sizing: border-box;
   cursor: pointer;
@@ -121,11 +121,6 @@ path {
       margin-top: 20px; }
     .categories-border .categories-layout:hover {
       background-color: #2E6171; }
-      .categories-border .categories-layout:hover .svg-background {
-        fill: #fff; }
-      .categories-border .categories-layout:hover .svg-img {
-        fill: #000;
-        stroke: #000; }
       .categories-border .categories-layout:hover .categories-h4 {
         color: #fff; }
 

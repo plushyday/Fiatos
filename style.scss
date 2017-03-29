@@ -48,7 +48,7 @@ path{
 .menu-node:not(.active) {
   float: left;
   line-height: 1.5;
-  margin-top: 16px;
+  margin-top: 20px;
   margin-right: 20px;
   box-sizing: border-box;
   cursor: pointer;
@@ -152,13 +152,6 @@ path{
             }
           &:hover{
             background-color:#2E6171;
-              .svg-background {
-                  fill:#fff;
-               }
-              .svg-img{
-                fill:#000;
-                stroke:#000;
-              }
               .categories-h4{
                 color: #fff;
               }
