@@ -1,7 +1,7 @@
 $(document).ready(function($) {
 
 //SEARCH ACTIVATION START
-$("#magnifier").on('focus', function () {
+$("#magnifier").on('click', function () {
 	$("#search").addClass('activate-search');
 });
 
@@ -110,7 +110,7 @@ $('.slider').each(function(){
 // "rgb(156,156,156)",
 // "rgb(147,161,153)",
 // "rgb(180,170,140)",
-// "rgb(131,177,190)",
+// "rgb(131,177,190)",//
 // "rgb(155,173,140)",
 // "rgb(163,170,148)",
 // "rgb(125,178,172)",
@@ -152,7 +152,6 @@ console.dir(svgcolor);
 svgcolor.each(function(){
 	var rand=randomInteger(0, obj.length-1);
 	var randcolor = obj[rand];
-  console.log(rand+" "+randcolor);
   $(this).css({"fill":randcolor});
   obj.splice(rand, 1);
 });
