@@ -1,0 +1,20 @@
+
+@font-face {
+  font-family: 'Open Sans';
+  @include fontdef("OpenSans", "Regular");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MyriadPro';
+  @include fontdef("MyriadPro", "Regular");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Palatino';
+  @include fontdef("PalatinoRoman", "Light");
+  font-weight: normal;
+  font-style: normal;
+}
+

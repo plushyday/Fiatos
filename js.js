@@ -1,5 +1,13 @@
 $(document).ready(function($) {
 
+//
+$(".bars").click(function() {
+  $('.bars').toggleClass("pushed");
+});
+$(".bars").click(function(){$(".smart-menu").attr("id", $(".smart-menu").attr("id") === "smart-menu-active"? '' : "smart-menu-active")});
+$(".bars").click(function(){$(".cat").toggleClass('catalogue');});
+//
+
 //SEARCH ACTIVATION START
 $("#magnifier").on('click', function () {
 	$("#search").addClass('activate-search');
@@ -124,15 +132,15 @@ $('.slider').each(function(){
 // "rgb(195,169,149)"];
 
 var obj =[
-"rgb(71,222,210)",
+"rgb(48,152,144)",
 "rgb(71,159,222)",
-"rgb(222,134,71)",
-"rgb(222,210,71)",
-"rgb(159,222,71)",
+"rgb(183,69,69)",
+"rgb(88,107,88)",
+"rgb(113,146,68)",
 "rgb(222,71,83)",
 "rgb(222,135,71)",
 "rgb(135,71,222)",
-"rgb(211,71,222)",
+"rgb(152,52,160)",
 "rgb(140,99,164)",
 "rgb(99,164,140)",
 "rgb(164,99,107)",

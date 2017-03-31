@@ -1,7 +1,42 @@
 $secolor:#F1D302;
 $fircolor:#31708f;
+$path: "./font/fonts" !default;
+@mixin fontdef($font, $FontType, $path:"./font/fonts") {
+  src:  url('#{$path}/#{$font}-#{$FontType}.eot');
+  src:  url('#{$path}/#{$font}-#{$FontType}.eot') format('embedded-opentype'),
+        url('#{$path}/#{$font}-#{$FontType}.woff') format('woff'),
+        url('#{$path}/#{$font}-#{$FontType}.ttf') format('truetype'),
+        url('#{$path}/#{$font}-#{$FontType}.svg') format('svg');
+}
+@mixin media($media) {
+  @if ($media > 1799) {
+    @media screen and (min-width: $media + px) { @content; }
+  }
+  @else{
+    @media screen and (max-width: $media + px) { @content; }
+  }
+}
+@font-face {
+  font-family: 'Open Sans';
+  @include fontdef("OpenSans", "Regular");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MyriadPro';
+  @include fontdef("MyriadPro", "Regular");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Palatino';
+  @include fontdef("PalatinoRoman", "Light");
+  font-weight: normal;
+  font-style: normal;
+}
 body{
   background-color:#f5f6f5;
+  font-family: "Open Sans";
    a:hover{
      text-decoration: none;
   }
@@ -12,6 +47,15 @@ path{
 .logo{
   float: left;
   margin-top: 5px;
+    @include media(760){
+    float: none;
+    width: 100%;
+    text-align: center;
+    svg{
+      max-width: 400px;
+
+    }
+  }
   .st3{
     -webkit-transition:all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
@@ -27,15 +71,89 @@ path{
   a {
     text-decoration: none;
   }
+
 }
 .header-right{
   float: right;
-}
+    @include media(760){
+      position: relative;
+    }
+    .smart-menu{
+      display: inline;
+    }
+        @include media(760){
+          float: none;
+                .bars {
+          margin: 0.2em 0;
+          padding-left:0%;
+          display: block;
+          width: 50%;
+          float: right;
+          -webkit-transition: margin 600ms;
+          transition: margin 600ms;
+          cursor: pointer;
+                  .bar {
+                  display: block;
+                  height: 0.5em;
+                  margin: 0.8em;
+                  border-right: 8.8em solid $fircolor;
+                  box-sizing: border-box;
+                  -webkit-transition-property: -webkit-transform, margin, border-right-color, box-shadow;
+                  -webkit-transition-property: margin, border-right-color, box-shadow, -webkit-transform;
+                  transition-property: margin, border-right-color, box-shadow, -webkit-transform;
+                  transition-property: transform, margin, border-right-color, box-shadow;
+                  transition-property: transform, margin, border-right-color, box-shadow, -webkit-transform;
+                  -webkit-transition-duration: 600ms;
+                  transition-duration: 600ms;
+                        &:nth-of-type(1) {
+                      -webkit-transition: opacity 300ms;
+                      transition: opacity 300ms;
+                    }
+                  }
+                
+                }
+                .smart-menu{
+      float: right;
+      display: none;
+    }
+              }
+    
+    #smart-menu-active{
+          margin-bottom: 25px;
+          background: #2b696f;
+          border-radius: 2px;
+          display: block;
+          position: absolute;
+          width: 100%;
+          top: 75px;
+          z-index: 10;
+        span{
+          width: 100%;
+          padding:0 0 0 10%;
+              height: 60px;
+              line-height: 60px;
+              margin: 0;
+              display: block;
+              border-bottom: 1px solid #1f253d;
+              -webkit-transition: background .2s;
+              transition: background .2s;
+              position: relative;
+                      &:hover{ background: #1d5a77;
+                  border-top: 1px solid #1f253d;
+                }
+                a{
+                  color: #fff;
+                }
+        }
+    }
+  }
 .catalogue {
   float: left;
-  margin-top: 15px;
+  margin-top: 20px;
   font-size: 1.5em;
-  color: #fff;
+  
+  font-family: 'MyriadPro';
+  // letter-spacing: 0.2em;
   background-color: $fircolor;
   padding: 6px 20px;
   text-decoration: none;
@@ -44,27 +162,44 @@ path{
   transition: all 0.15s ease-in-out;
   &:hover {
     background-color: $secolor;
-    color: #000;
+    
     text-decoration: none;
+    a{
+      color: #000;
+    }
+  }
+  a{
+    color: #fff;
   }
 }
-.menu-node:not(.active) {
+.menu-node:not(.catalogue) {
   float: left;
   line-height: 1.5;
   margin-top: 23px;
   margin-right: 20px;
   box-sizing: border-box;
+  font-family: 'MyriadPro';
   cursor: pointer;
-  font-size: 1.4em;
+  font-size: 1.5em;
   color: #6D6D6D;
   -webkit-transition:all 0.15s ease-in-out;
   transition: all 0.15s ease-in-out;
   &:hover{
     color: $secolor;
   }
-
+}
+.menu-basket-media{
+  @include media(760){
+      margin-top:0 !important;
+    }
 }
 #shop_basket{
+  @include media(760){
+      width: 100px !important;
+      path{
+        fill: darken($fircolor,15%);
+      }
+    }
   .bask0{
     -webkit-transition:all 0.15s ease-in-out;
     transition: all 0.15s ease-in-out;
@@ -82,6 +217,9 @@ path{
 #magnifier{
   outline: none;
   margin-left:-15px;
+    @include media(760){
+      display: none;
+    }
   .magn0{
     -webkit-transition:all 0.15s ease-in-out;
     transition: all 0.15s ease-in-out;
@@ -94,6 +232,20 @@ path{
 }
 #search{
   float: left;
+  margin-top: 10px;
+    @include media(760){
+      float: none;
+      width: 100%;
+      display: block;
+
+      input{
+           width: 100% !important;
+          outline: none;
+          margin: 8px 0; 
+          float: left;
+          padding: 20px 20px !important;
+      }
+    }
   &.activate-search{
     input{
       width: 300px;
@@ -116,7 +268,7 @@ path{
 }
 
 .categories-border {
-    // border: 1px solid #e7eaed;
+    border: 1px solid #e7eaed;
     margin: 20px 0;
       .categories-layout {
         background: #fbfbfb;
@@ -176,16 +328,21 @@ path{
   }
 
  .pre-footer{
-  background-color:darken(rgb(131,177,190),5%);
+  padding: 60px 0;
+  background-color:#6695a2;
     h1{
       color: #fff;
-      font-weight: 600;
     }
     section{
       font-weight: 200;
       font-size: 1.5em;
       padding: 0 20%;
       color: $fircolor;
+            .text-style{
+        margin: 20px 0 0 0;
+        color: #fff;
+        font-size: 1.3em;
+      }
     }
   
 }
@@ -212,9 +369,9 @@ path{
       }
           .glyphicon{
             margin-top: -5px;
-            margin-right: 5px;
-            color: rgb(125,178,172);
-            background-color:#fff;
+            margin-right: 8px;
+            color:#fff;
+            background-color:$fircolor;
             padding: 6px;
             border-radius: 50%;
             -webkit-border-radius: 50%;
@@ -233,6 +390,7 @@ path{
   svg{
     width: 30%;
   }
+
 }
 
 
@@ -244,6 +402,13 @@ path{
     color: #fff;
     font-size: 14px;
   }
+    .copyrights{
+    p{
+    color:#979797;
+    font-style: italic;
+    }
+  }
 }
+
 
 @import "_slider.scss";

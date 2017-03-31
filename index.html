@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
@@ -74,12 +75,18 @@
 								</svg>
 					</a>
 				</div>
-				<div class="header-right">
-					<a class="active catalogue menu-node" href="login.html">каталог</a>
-					
-					<span class="menu-node toggle-menu">доставка и оплата</span>
-					<span class="menu-node toggle-menu">о нас</span>
-					<span class="menu-node toggle-menu">
+				<nav class="header-right">
+					<div class="bars">
+						<span class="bar"></span>
+					    <span class="bar"></span>
+					    <span class="bar"></span>
+					</div>
+					<div class="smart-menu">
+						<span class="menu-node cat catalogue"><a href="login.html">каталог</a></span>
+						<span class="menu-node "><a>доставка и оплата</a></span>
+						<span class="menu-node"><a>о нас</a></span>
+					</div>
+					<span class="menu-node menu-basket-media">
 						<svg version="1.1" id="shop_basket" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
 								 y="0px" viewBox="0 0 70 80" xml:space="preserve">
 								 <ellipse class="bask0" cx="34.2" cy="28.4" rx="29.7" ry="28.2"/>
@@ -136,7 +143,7 @@
 							</g>
 							</svg>
 					</span>
-				</div>
+				</nav>
 			</div>
     	</div>
 	</div>
@@ -518,18 +525,38 @@
 						        
 						    // Multiple Markers
 						    var markers = [
-						        ['Кошевого, Минск', 53.8846853,27.6017961],
-						        ['Парижской коммуны, Минск', 53.9079279,27.5643349]
+						        ['Пр-т Независимости, 181', 53.946876, 27.689635],
+						        ['Пр-т Дзержинского, 104, БЦ "Титан"', 53.862052, 27.480370],
+						        ['ул. Сухаревская, 16, ТЦ "Праздник"', 53.886025, 27.438852],
+						        ['Логойский тракт, 1/1', 53.940477, 27.606094],
+						        ['ул. Налибокская, 1, ТЦ "Караван"', 53.926830, 27.440380],
+						        ['Пр-т Пушкина, 12A, пом. 11', 53.898794, 27.497690]
 						    ];
 						                        
 						    // Info Window Content
 						    var infoWindowContent = [
 						        ['<div class="info_content">' +
-						        '<h3>London Eye</h3>' +
-						        '<p>The London Eye is a giant Ferris wheel situated on the banks of the River Thames. The entire structure is 135 metres (443 ft) tall and the wheel has a diameter of 120 metres (394 ft).</p>' +        '</div>'],
+						        '<h3>Проспект независимости, 181</h3>' +
+						        '<p>Находимся возле аптеки</p>' +        '</div>'],
 						        ['<div class="info_content">' +
-						        '<h3>Palace of Westminster</h3>' +
-						        '<p>The Palace of Westminster is the meeting place of the House of Commons and the House of Lords, the two houses of the Parliament of the United Kingdom. Commonly known as the Houses of Parliament after its tenants.</p>' +
+						        '<h3>БЦ "Титан"</h3>' +
+						        '<p>Находимся в прикассовой зоне "Евроопт"</p>' +
+						        '</div>'],
+						        ['<div class="info_content">' +
+						        '<h3>ТЦ "Праздник"</h3>' +
+						        '<p>Находимся в павильоне 87 на 2 этаже</p>' +
+						        '</div>'],
+						        ['<div class="info_content">' +
+						        '<h3>Логойский тракт, 1/1</h3>' +
+						        '<p>Находимся возле аптеки</p>' +
+						        '</div>'],
+						        ['<div class="info_content">' +
+						        '<h3>ТЦ "Караван"</h3>' +
+						        '<p>Находимся возле аптеки</p>' +
+						        '</div>'],
+						        ['<div class="info_content">' +
+						        '<h3>Проспект Пушкина, 12А</h3>' +
+						        '<p>Помещение 11</p>' +
 						        '</div>']
 						    ];
 						        
@@ -560,7 +587,7 @@
 
 						    // Override our map zoom level once our fitBounds function runs (Make sure it only runs once)
 						    var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
-						        this.setZoom(14);
+						        this.setZoom(11);
 						        google.maps.event.removeListener(boundsListener);
 						    });
 						}
@@ -568,71 +595,83 @@
 						<script async defer type='text/javascript' src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCH7BQ8lkkePoxQ2yhyX62tGvmJ05b4Myc&callback=initmap"></script>
 			<div class="container-fluid">
       		<div class="row pre-footer">
-      			<article class="text-center col-xs-5">
+      			<article class="text-center col-md-5 col-xs-12">
       				<h1>О нас</h1>
 					<section>
+						<div class="text-style">
 						Мы частное предприятие "Фиатос" предлагаем уникальный выбор медицинских товаров на территории города Минск.
+						</div>
 					</section>
       			</article>
-      			<article class="text-center col-xs-6 contact-article">
+      			<article class="text-center col-md-6 col-xs-12 contact-article">
       				<h1>Контакты</h1>
       				<div class="row">
-							<address class="col-xs-6 col-xs-offset-3">
+							<address class="col-md-6 col-xs-12">
 								<ul class="location">
-									<li><span class="glyphicon glyphicon-map-marker"></span>ул.Асаналиева 10-20</li>
+									<li><span class="glyphicon glyphicon-map-marker"></span>Пр-т Дзержинского, 104, ТЦ "Титан" (прикассовая зона "Евроопт")</li>
+									<div class="clearfix"></div>
+								</ul>	
+								<ul class="location">
+									<li><span class="glyphicon glyphicon-earphone"></span>+375 33 393-35-59</li>
+									<div class="clearfix"></div>
+								</ul>	
+							</address>
+
+							<address class="col-md-6 col-xs-12">
+								<ul class="location">
+									<li><span class="glyphicon glyphicon-map-marker"></span>Пр-т Независимости, 181 станция метро Уручье (возле аптеки)</li>
 									<div class="clearfix"></div>
 								</ul>	
 								<ul class="location">
 									<li><span class="glyphicon glyphicon-earphone"></span>+0 561 111 235</li>
 									<div class="clearfix"></div>
 								</ul>	
-								<ul class="location">
-									<li><span class="glyphicon glyphicon-envelope"></span></li>
-									<li><a href="mailto:info@example.com">mail@example.com</a></li>
-									<div class="clearfix"></div>
-								</ul>						
 							</address>
-							<!-- <address class="col-xs-2 col-offset-1">
-									<ul class="location">
-									<li>Время работы:</li>
-										<li>8:00-18:00</li>
-									</ul>
-							</address> -->
 					</div>
 						<div class="row">
-							<address class="col-xs-6 col-xs-offset-3">
+							<address class="col-md-6 col-xs-12">
 								<ul class="location">
-									<li><span class="glyphicon glyphicon-map-marker"></span>ул.Победная, д.15 кв.88</li>
+									<li><span class="glyphicon glyphicon-map-marker"></span>Пр-т Дзержинского, 104, ТЦ "Титан" (прикассовая зона "Евроопт")</li>
+									<div class="clearfix"></div>
+								</ul>	
+								<ul class="location">
+									<li><span class="glyphicon glyphicon-earphone"></span>+375 33 393-35-59</li>
+									<div class="clearfix"></div>
+								</ul>	
+							</address>
+							<address class="col-md-6 col-xs-12">
+								<ul class="location">
+									<li><span class="glyphicon glyphicon-map-marker"></span>Пр-т Независимости, 181 станция метро Уручье (возле аптеки)</li>
 									<div class="clearfix"></div>
 								</ul>	
 								<ul class="location">
 									<li><span class="glyphicon glyphicon-earphone"></span>+0 561 111 235</li>
 									<div class="clearfix"></div>
 								</ul>	
-								<ul class="location">
-									<li><span class="glyphicon glyphicon-envelope"></span></li>
-									<li><a href="mailto:info@example.com">mail@example.com</a></li>
-									<div class="clearfix"></div>
-								</ul>						
 							</address>
-						</div>
-						<div class="row">
-							<address class="col-xs-6 col-xs-offset-3">
+					</div>
+					<div class="row">
+							<address class="col-md-6 col-xs-12">
 								<ul class="location">
-									<li><span class="glyphicon glyphicon-map-marker"></span>ул.Клары-Цеткин, д.1 оф.355</li>
+									<li><span class="glyphicon glyphicon-map-marker"></span>Пр-т Дзержинского, 104, ТЦ "Титан" (прикассовая зона "Евроопт")</li>
+									<div class="clearfix"></div>
+								</ul>	
+								<ul class="location">
+									<li><span class="glyphicon glyphicon-earphone"></span>+375 33 393-35-59</li>
+									<div class="clearfix"></div>
+								</ul>	
+							</address>
+							<address class="col-md-6 col-xs-12">
+								<ul class="location">
+									<li><span class="glyphicon glyphicon-map-marker"></span>Пр-т Независимости, 181 станция метро Уручье (возле аптеки)</li>
 									<div class="clearfix"></div>
 								</ul>	
 								<ul class="location">
 									<li><span class="glyphicon glyphicon-earphone"></span>+0 561 111 235</li>
 									<div class="clearfix"></div>
 								</ul>	
-								<ul class="location">
-									<li><span class="glyphicon glyphicon-envelope"></span></li>
-									<li><a href="mailto:info@example.com">mail@example.com</a></li>
-									<div class="clearfix"></div>
-								</ul>						
 							</address>
-						</div>
+					</div>
       			</article>
       		</div>	
 			</div>
@@ -700,13 +739,13 @@
 					</a>
 				</div>
 				<div class="footer-social-icons">
-					<ul>
+				<!-- 	<ul>
 						<li><a class="facebook" href="#"><span>Facebook</span></a></li>
 						<li><a class="twitter" href="#"><span>Twitter</span></a></li>
 						<li><a class="flickr" href="#"><span>Flickr</span></a></li>
 						<li><a class="googleplus" href="#"><span>Google+</span></a></li>
 						<li><a class="dribbble" href="#"><span>Dribbble</span></a></li>
-					</ul>
+					</ul> -->
 				</div>
 				<div class="copyrights">
 					<p> © 2017 Fiatos. All Rights Reserved | Design by  <a href=""> </a></p>

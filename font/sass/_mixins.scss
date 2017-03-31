@@ -1,0 +1,7 @@
+@mixin fontdef($font, $FontType, $path:"./font/fonts") {
+  src:  url('#{$path}/#{$font}-#{$FontType}.eot');
+  src:  url('#{$path}/#{$font}-#{$FontType}.eot') format('embedded-opentype'),
+        url('#{$path}/#{$font}-#{$FontType}.woff') format('woff'),
+        url('#{$path}/#{$font}-#{$FontType}.ttf') format('truetype'),
+        url('#{$path}/#{$font}-#{$FontType}.svg') format('svg');
+}
