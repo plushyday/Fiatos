@@ -1,11 +1,16 @@
 $(document).ready(function($) {
 
 //
-$(".bars").click(function() {
-  $('.bars').toggleClass("pushed");
-});
-$(".bars").click(function(){$(".smart-menu").attr("id", $(".smart-menu").attr("id") === "smart-menu-active"? '' : "smart-menu-active")});
-$(".bars").click(function(){$(".cat").toggleClass('catalogue');});
+// $(".bars").click(function() {
+//   $('.bars').toggleClass("pushed");
+// });
+// $('.bars').click(function(){
+//   $('#menu-toggle').toggleClass('open');
+// })
+$(".menu-mobile").click(function(){$(".smart-menu").attr("id", $(".smart-menu").attr("id") === "smart-menu-active"? '' : "smart-menu-active")});
+$(".menu-mobile").click(function(){$(".cat").toggleClass('catalogue');});
+$(".menu-mobile").click(function(){$(".bars").parent().toggleClass('menu-toggle');});
+
 //
 
 //SEARCH ACTIVATION START

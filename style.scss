@@ -89,30 +89,38 @@ path{
           display: block;
           width: 50%;
           float: right;
-          -webkit-transition: margin 600ms;
-          transition: margin 600ms;
-          cursor: pointer;
+          transition: opacity 300ms;
                   .bar {
                   display: block;
                   height: 0.5em;
                   margin: 0.8em;
                   border-right: 8.8em solid $fircolor;
                   box-sizing: border-box;
-                  -webkit-transition-property: -webkit-transform, margin, border-right-color, box-shadow;
-                  -webkit-transition-property: margin, border-right-color, box-shadow, -webkit-transform;
-                  transition-property: margin, border-right-color, box-shadow, -webkit-transform;
-                  transition-property: transform, margin, border-right-color, box-shadow;
-                  transition-property: transform, margin, border-right-color, box-shadow, -webkit-transform;
-                  -webkit-transition-duration: 600ms;
-                  transition-duration: 600ms;
-                        &:nth-of-type(1) {
-                      -webkit-transition: opacity 300ms;
-                      transition: opacity 300ms;
-                    }
                   }
-                
                 }
-                .smart-menu{
+          .menu-toggle{
+          	.bars{
+          		width: 0;
+          		opacity: 0;
+          		.bar{
+          		border-right-style: none;
+          		}
+          	}
+           .cross{
+           		transition: all 300ms;
+           	    float: right;
+			    margin-right: 10%;
+			    font-size: 80px;
+			    font-weight: 900;
+			    line-height: 1;
+			    color: #000;
+            &:after{
+            	content: "\2715";
+            }
+        }
+     }
+
+      .smart-menu{
       float: right;
       display: none;
     }
@@ -344,7 +352,11 @@ path{
         font-size: 1.3em;
       }
     }
-  
+  #about_us{
+  	@include media(760){
+  		display: none;
+  	}
+  }
 }
 .contact-article{
 // border-left: 2px solid $fircolor;

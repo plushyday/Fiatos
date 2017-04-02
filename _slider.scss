@@ -1,12 +1,13 @@
 .slider-container{
-  height: 340px;
+  position: relative;
+  height: 360px;
   margin: 0;
   padding: 0;
   width: 100%;
     .slider {
       margin: 0 auto;
         .slide_viewer {
-          height: 340px;
+          height: 360px;
           overflow: hidden;
           position: relative;
               .slide_group {
@@ -47,7 +48,7 @@
 
 .slide_buttons {
   left: 0;
-  top: 360px;
+  top: 300px;
   z-index: 100;
   position: absolute;
   right: 0;
