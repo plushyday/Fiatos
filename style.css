@@ -237,6 +237,10 @@ path {
       text-align: center;
       height: 35px;
       margin-top: 20px; }
+      @media screen and (max-width: 760px) {
+        .categories-border .categories-layout .categories-h4 {
+          font-size: 14px;
+          font-weight: bold; } }
     .categories-border .categories-layout:hover {
       background-color: #2E6171; }
       .categories-border .categories-layout:hover .categories-h4 {

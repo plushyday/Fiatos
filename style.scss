@@ -307,6 +307,10 @@ path{
               text-align: center;
               height: 35px;
               margin-top: 20px;
+              	@include media(760){
+              		font-size: 14px;
+              		font-weight: bold;
+              	}
             }
           &:hover{
             background-color:#2E6171;
