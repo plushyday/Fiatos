@@ -404,9 +404,11 @@ path{
 }
 .footer-logo{
   svg{
-    width: 30%;
-  }
-
+    width: 20%;
+    @include media(1800){
+    width: 15%;
+      }
+    }
 }
 
 

@@ -305,7 +305,10 @@ path {
     vertical-align: top; }
 
 .footer-logo svg {
-  width: 30%; }
+  width: 20%; }
+  @media screen and (min-width: 1800px) {
+    .footer-logo svg {
+      width: 15%; } }
 
 .footer-bottom {
   background: #3c3d41;
