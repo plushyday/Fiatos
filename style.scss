@@ -408,6 +408,9 @@ path{
     @include media(1800){
     width: 15%;
       }
+      @include media(760){
+    width: 40%;
+      }
     }
 }
 
