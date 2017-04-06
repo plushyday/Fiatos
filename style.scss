@@ -290,7 +290,7 @@ path{
           text-align: center;
           cursor: pointer;
             svg {
-              width: 50%;
+              width: 40%;
                .svg-background {
                   fill:darken($fircolor,15%);
                 }
@@ -404,9 +404,14 @@ path{
 }
 .footer-logo{
   svg{
-    width: 30%;
-  }
-
+    width: 20%;
+    @include media(1800){
+    width: 15%;
+      }
+      @include media(760){
+    width: 40%;
+      }
+    }
 }
 
 

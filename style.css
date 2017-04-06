@@ -223,7 +223,7 @@ path {
     text-align: center;
     cursor: pointer; }
     .categories-border .categories-layout svg {
-      width: 50%; }
+      width: 40%; }
       .categories-border .categories-layout svg .svg-background {
         fill: #1d4356; }
       .categories-border .categories-layout svg .svg-img {
@@ -305,7 +305,13 @@ path {
     vertical-align: top; }
 
 .footer-logo svg {
-  width: 30%; }
+  width: 20%; }
+  @media screen and (min-width: 1800px) {
+    .footer-logo svg {
+      width: 15%; } }
+  @media screen and (max-width: 760px) {
+    .footer-logo svg {
+      width: 40%; } }
 
 .footer-bottom {
   background: #3c3d41;
