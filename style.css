@@ -324,6 +324,27 @@ path {
     color: #979797;
     font-style: italic; }
 
+.panel-group .panel {
+  border-radius: 0px; }
+  .panel-group .panel .panel-heading:hover {
+    background-color: #3c3d41;
+    color: #fff; }
+  .panel-group .panel + .panel {
+    margin-top: 0px !important; }
+  .panel-group .panel:not(:last-child) {
+    border-bottom: 0px; }
+  .panel-group .panel a {
+    text-decoration: none; }
+
+.list-group {
+  margin: 0px; }
+  .list-group .list-group-item {
+    border-radius: 0px; }
+    .list-group .list-group-item:hover {
+      background: #6695a2;
+      color: #fff;
+      cursor: pointer; }
+
 .slider-container {
   position: relative;
   height: 360px;

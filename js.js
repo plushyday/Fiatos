@@ -182,6 +182,10 @@ svgcolor.each(function(){
   obj.splice(rand, 1);
 });
 //RANDOM COLOR END 
+ $('.collapse').collapse({
+      toggle: false
+    });
+
 });
 
 
