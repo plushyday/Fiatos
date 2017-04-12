@@ -92,6 +92,7 @@
 					<div class="cross"></div>
 				</div>
 					<div class="smart-menu">
+						<span class="menu-node"><a href="index.html">главная</a></span>
 						<span class="menu-node cat catalogue"><a href="login.html">каталог</a></span>
 						<span class="menu-node "><a>доставка и оплата</a></span>
 						<span class="menu-node"><a>о нас</a></span>
@@ -208,11 +209,11 @@
 
 <div class="categories-section">
 <div class="container-fluid">
-							<h1 class="page-header text-center">Главные категории</h1>
+	<h1 class="page-header text-center">Главные категории</h1>
 			<div class="row">
 				<div class="panel-group col-md-3 col-md-offset-2" id="accordion" role="tablist" aria-multiselectable="true">
 				  <div class="panel panel-default"> 
-						  <div class="panel-heading" role="tab" id="inhaler-list-heading"> 
+						  <div class="panel-heading panel-heading-hover" role="tab" id="inhaler-list-heading"> 
 							  <h4 class="panel-title"> 
 							  <a href="#inhaler-list" class="" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="inhaler-list">Ингаляторы</a> 
 							  </h4> 
@@ -227,7 +228,7 @@
 				  </div>
 
 				  <div class="panel panel-default"> 
-						  <div class="panel-heading" role="tab" id="pulsimeter-list-heading"> 
+						  <div class="panel-heading panel-heading-hover" role="tab" id="pulsimeter-list-heading"> 
 							  <h4 class="panel-title"> 
 							  <a href="#pulsimeter-list" class="" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="pulsimeter-list">Тонометры</a> 
 							  </h4> 
@@ -245,7 +246,7 @@
 				  </div>
 
 				  <div class="panel panel-default"> 
-						<div class="panel-heading" role="tab" id="glucometer-list-heading"> 
+						<div class="panel-heading panel-heading-hover" role="tab" id="glucometer-list-heading"> 
 						  <h4 class="panel-title"> 
 							  <a href="#glucometer-list" class="" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="glucometer-list">Глюкометры и расходный материал</a> 
 						  </h4> 
@@ -253,7 +254,7 @@
 				  </div>
 					
 					<div class="panel panel-default"> 
-						  <div class="panel-heading" role="tab" id="thermometer-list-heading"> 
+						  <div class="panel-heading panel-heading-hover" role="tab" id="thermometer-list-heading"> 
 							  <h4 class="panel-title"> 
 							  <a href="#thermometer-list" class="" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="thermometer-list">Термометры</a> 
 							  </h4> 
@@ -266,14 +267,14 @@
 					  </div>  -->
 
 					  <div class="panel panel-default"> 
-						  <div class="panel-heading" role="tab" id="irrigator-list-heading"> 
+						  <div class="panel-heading panel-heading-hover" role="tab" id="irrigator-list-heading"> 
 							  <h4 class="panel-title"> 
 							  <a href="#irrigator-list" class="" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="irrigator-list">Ирригаторы</a> 
 							  </h4> 
 						  </div> 
 					</div> 
 				  <div class="panel panel-default"> 
-						  <div class="panel-heading" role="tab" id="orthopedy-list-heading"> 
+						  <div class="panel-heading panel-heading-hover" role="tab" id="orthopedy-list-heading"> 
 							  <h4 class="panel-title"> 
 							  <a href="#orthopedy-list" class="" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="orthopedy-list">Ортопедические товары</a> 
 							  </h4> 
@@ -290,7 +291,7 @@
 					  </div> 
 				  </div>
 				  <div class="panel panel-default"> 
-						  <div class="panel-heading" role="tab" id="physiotherapy-list-heading"> 
+						  <div class="panel-heading panel-heading-hover" role="tab" id="physiotherapy-list-heading"> 
 							  <h4 class="panel-title"> 
 							  <a href="#physiotherapy-list" class="" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="physiotherapy-list">Аппараты физиотерапии</a> 
 							  </h4> 
@@ -307,7 +308,7 @@
 					  </div> 
 				  </div>
 				  <div class="panel panel-default"> 
-						  <div class="panel-heading" role="tab" id="net-list-heading"> 
+						  <div class="panel-heading panel-heading-hover" role="tab" id="net-list-heading"> 
 							  <h4 class="panel-title"> 
 							  <a href="#net-list" class="" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="net-list">Сетки</a> 
 							  </h4> 
@@ -324,7 +325,7 @@
 					  </div> 
 				  </div>
 				   <div class="panel panel-default"> 
-						  <div class="panel-heading" role="tab" id="lens-list-heading"> 
+						  <div class="panel-heading panel-heading-hover" role="tab" id="lens-list-heading"> 
 							  <h4 class="panel-title"> 
 							  <a href="#lens-list" class="" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="lens-list">Контактные линзы</a> 
 							  </h4> 
@@ -345,7 +346,16 @@
 							<div class="row panel-group">
 								<div class="category-filters col-md-8">
 									<div class="panel panel-default">
-										<div class="panel-heading" role="tab">filters</div>
+										<div class="panel-heading" role="tab">
+										<h4 class="panel-title price-header">Фильтровать по цене</h4>
+											<div class="input-group 
+											price-holder input-group-lg">
+  <input type="text" class="form-control" placeholder="От" aria-describedby="sizing-addon1">
+</div>
+<div class="input-group price-holder input-group-lg">
+  <input type="text" class="form-control" placeholder="До" aria-describedby="sizing-addon1">
+</div>
+</div>
 									</div>
 								</div>
 								<div class="category-content col-md-8"></div>
