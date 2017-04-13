@@ -357,6 +357,13 @@ path {
 .catalog-content {
   border: 1px solid #CCCCCC;
   padding: 15px; }
+  .catalog-content .dropdown {
+    height: 50px; }
+    .catalog-content .dropdown button {
+      float: right;
+      border-radius: 0px; }
+  .catalog-content .dropdown-menu {
+    right: 0; }
   .catalog-content .content-list li {
     background: #F9F9F9;
     margin-bottom: 30px;

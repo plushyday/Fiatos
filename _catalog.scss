@@ -44,6 +44,17 @@
 .catalog-content{
     border: 1px solid #CCCCCC;
     padding: 15px;
+    .dropdown{
+      height: 50px;
+      button{
+        float: right;
+        border-radius: 0px;
+      }
+
+    }
+       .dropdown-menu{
+        right: 0;
+      }
     .content-list{
       li{
         background: #F9F9F9;
