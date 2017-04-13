@@ -431,48 +431,5 @@ path{
   }
 }
 
-.panel-group{
-
-  .panel{
-    border-radius: 0px;
-        background-color: #f5f5f5;
-    .panel-heading-hover{
-      &:hover{
-        background-color: #3c3d41;
-        color: #fff;
-      }
-    }
-    &+.panel{
-    margin-top: 0px !important;
-
-    }
-  &:not(:last-child){
-    border-bottom:0px;
-  }
-    a{
-      text-decoration: none;
-    }
-  }
-}
-
-.list-group{
-  margin:0px;
-
-.list-group-item{
-   border-radius: 0px;
-   &:hover{
-      background: #6695a2;
-      color: #fff;
-      cursor: pointer;
-    }
-  }
-}
-.price-header{
-  margin-bottom: 10px;
-}
-.price-holder{
-  width: 50%;
-  float: left;
-  margin-bottom: 3%;
-}
+@import "_catalog.scss";
 @import "_slider.scss";

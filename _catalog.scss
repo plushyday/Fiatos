@@ -1,0 +1,105 @@
+.panel-group{
+  .panel{
+    border-radius: 0px;
+        background-color: #f5f5f5;
+    .panel-heading-hover{
+      &:hover{
+        background-color: #3c3d41;
+        color: #fff;
+      }
+    }
+    &+.panel{
+    margin-top: 0px !important;
+
+    }
+  &:not(:last-child){
+    border-bottom:0px;
+  }
+    a{
+      text-decoration: none;
+    }
+  }
+}
+
+.list-group{
+  margin:0px;
+  .list-group-item{
+     border-radius: 0px;
+     &:hover{
+        background: #6695a2;
+        color: #fff;
+        cursor: pointer;
+    }
+  }
+}
+.price-header{
+  margin-bottom: 10px;
+}
+.price-holder{
+  width: 50%;
+  float: left;
+  margin-bottom: 3%;
+}
+
+.catalog-content{
+    border: 1px solid #CCCCCC;
+    padding: 15px;
+    .content-list{
+      li{
+        background: #F9F9F9;
+        margin-bottom: 30px;
+        padding: 20px;
+        list-style-type: none;
+        transition: 0.5s all;
+        -webkit-transition: 0.5s all;
+        -moz-transition: 0.5s all;
+        -o-transition: 0.5s all;
+        -ms-transition: 0.5s all;
+        box-shadow: 0 0 0.6em #ccc;
+        -webkit-box-shadow: 0 0 0.6em #ccc;
+        -o-box-shadow: 0 0 0.6em #ccc;
+        -moz-box-shadow: 0 0 0.6em #ccc;
+        -ms-box-shadow: 0 0 0.6em #ccc;
+        img{
+              float: left;
+              margin-right: 0;
+              padding-bottom: 0;
+              border: 1px solid #D1E0EE;
+              padding: 0;
+              width: 20%;
+              background-color: #fff;
+        }
+        .list-left{
+              width: 60%;
+              margin-left: 3%;
+              float: left;
+        }
+        .list-right{
+              width: 15%;
+              float: right;
+        }
+        .title{
+              overflow: hidden;
+              word-wrap: break-word;
+              font-size: 20px;
+              text-decoration: none;
+              color: #000000;
+              font-weight: 500;
+              letter-spacing: 1px;
+        }
+        .in-catalog-prive{
+              display: block;
+              font-size: 22px;
+              color: darker($fircolor,20%);
+              margin: 10px 0 0 0;
+        }
+        .catalog-path{
+              overflow: hidden;
+              word-wrap: break-word;
+              color: #C1C1C1;
+              font-size: 13px;
+              margin-top: 15px;
+        }
+      }
+    }
+}
