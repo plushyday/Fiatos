@@ -392,8 +392,10 @@ path {
       margin-left: 3%;
       float: left; }
     .catalog-content .content-list li .list-right {
-      width: 15%;
       float: right; }
+      .catalog-content .content-list li .list-right .availability {
+        word-wrap: normal;
+        text-decoration: underline; }
     .catalog-content .content-list li .title {
       overflow: hidden;
       word-wrap: break-word;

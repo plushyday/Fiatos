@@ -86,8 +86,11 @@
               float: left;
         }
         .list-right{
-              width: 15%;
               float: right;
+               .availability{
+                word-wrap: normal;
+                text-decoration: underline;
+              }
         }
         .title{
               overflow: hidden;
@@ -111,6 +114,7 @@
               font-size: 13px;
               margin-top: 15px;
         }
+
       }
     }
 }
