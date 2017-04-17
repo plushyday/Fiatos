@@ -211,16 +211,18 @@
 <div class="container-fluid">
 	<h1 class="page-header text-center">Главные категории</h1>
 			<div class="row">
-				<div class="panel-group col-md-3 col-md-offset-2" id="accordion" role="tablist" aria-multiselectable="true">
+				<div class="panel-group col-md-3 col-md-offset-1" id="accordion" role="tablist" aria-multiselectable="true">
 				  <div class="panel panel-default"> 
 						  <div class="panel-heading panel-heading-hover" role="tab" id="inhaler-list-heading"> 
 							  <h4 class="panel-title"> 
-							  <a href="#inhaler-list" class="" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="inhaler-list">Ингаляторы</a> 
+							  <a href="#inhaler-list" class="" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="inhaler-list">
+								
+							  Ингаляторы</a> 
 							  </h4> 
 						  </div> 
 						  <div class="panel-collapse collapse" role="tabpanel" id="inhaler-list" aria-labelledby="inhaler-list-heading" aria-expanded="false"> 
 							  <ul class="list-group"> 
-								  <li class="list-group-item">Компрессорные</li> 
+								  <li class="list-group-item"><a href="catalog.html#category">Компрессорные</a></li> 
 								  <li class="list-group-item">Ультразвуковые</li> 
 								  <li class="list-group-item">Аксессуары для ингаляторов</li>
 							  </ul> 
@@ -318,12 +320,13 @@
 					  </div> 
 				  </div>
 				  </div>
-						   <div class="col-md-7">
+						   <div class="col-md-8">
 							<div class="row panel-group">
-								<div class="category-filters col-md-8">
+								<div class="category-filters col-md-10">
+								<a name="category"></a>
 									<div class="panel panel-default">
 										<div class="panel-heading" role="tab">
-										<h4 class="panel-title price-header">Фильтровать по цене</h4>
+										<h4 class="panel-title price-header">Искать в ценовом диапазоне</h4>
 											<div class="input-group price-holder input-group-lg">
 											  <input type="text" class="form-control" placeholder="От" aria-describedby="sizing-addon1">
 											</div>
@@ -338,24 +341,20 @@
 								</div>
 								</div>
 								<div class="row">
-									<div class="col-md-8 catalog-content">
+									<div class="col-md-10 catalog-content">
 										<div class="dropdown">
 											  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-											    Dropdown
+											    Сортировать по цене
 											    <span class="caret"></span>
 											  </button>
 											  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-											    <li><a href="#">Action</a></li>
-											    <li><a href="#">Another action</a></li>
-											    <li><a href="#">Something else here</a></li>
-											    <li role="separator" class="divider"></li>
-											    <li><a href="#">Separated link</a></li>
+											    <li><a href="#">Сначала самые дорогие</a></li>
+											    <li><a href="#">Сначала самые дешевые</a></li>
 											  </ul>
 											</div>
 										<ul class="list-group content-list">
 										  <li class="list-group-item"><a href="">
-										 
-									<img src="glukometr.svg" title="" alt="">
+									<img src="LD-210c_270x270_a.jpg" title="" alt="">
 									<section class="list-left">
 									<h5 class="title">Ингалятор компрессорный 55</h5>
 									<span class="in-catalog-price">$290</span>
@@ -365,13 +364,23 @@
 									<span class="availability">В наличии</span>
 									</section>
 									<div class="clearfix"></div>
-									
 										  </a></li>
-										  <li class="list-group-item">Dapibus ac facilisis in</li>
-										  <li class="list-group-item">Morbi leo risus</li>
-										  <li class="list-group-item">Porta ac consectetur ac</li>
-										  <li class="list-group-item">Vestibulum at eros</li>
+										  <li class="list-group-item"><a href="">
+									<img src="LD-210c_270x270_a.jpg" title="" alt="">
+									<section class="list-left">
+									<h5 class="title">Ингалятор компрессорный 55</h5>
+									<span class="in-catalog-price">$290</span>
+									<p class="catalog-path">Ингаляторы » Компрессорные</p>
+									</section>
+									<section class="list-right">
+									<span class="availability">В наличии</span>
+									</section>
+									<div class="clearfix"></div>
+										  </a></li>
+										
 										</ul>
+									<div class="ajax-filter-count" data-count="3">
+					<a href="#" class="ajax-more">Загрузить еще 2 из 15</a></div>
 									</div>
 								</div>
 								</div>
