@@ -1,0 +1,38 @@
+.item-container{
+	padding: 15px;
+    border: 1px solid #eee;
+    overflow: hidden;
+    p{
+    	    font-size: 13px;
+		    color: #929292;
+		    margin: 15px 0;
+		    word-spacing: 3px;
+		    font-size: 1em;
+		    i{
+		    	color: $fircolor;
+		    	padding-right: 5px;
+		    }
+    }
+}
+.breadcrumb{
+	background-color: #FFFFFF;
+    border: 1px solid #F3F3F3;
+    padding: 10px 15px;
+}
+.slides-item{
+	padding: 0;
+	position: relative;
+	li{
+		list-style-type: none;
+		float: left;
+		width: 20%;
+		cursor: pointer;
+		transition: all 200ms ease-in-out;
+		img{
+			transition: all 200ms ease-in-out;
+		}
+		.relative{
+			position: relative;
+		}
+	}
+}

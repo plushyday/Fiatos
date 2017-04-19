@@ -16,6 +16,7 @@
     border-bottom:0px;
   }
     a{
+      color: #040404;
       text-decoration: none;
     }
   }
@@ -28,6 +29,7 @@
      &:hover{
         background: lighten(#6695a2, 10%);
         color: #fff;
+        border-radius: 0px;
         cursor: pointer;
     }
   }
@@ -62,7 +64,7 @@
       }
     .content-list{
       li{
-        background: #F9F9F9;
+        background: #fcfcfd;
         margin-bottom: 30px;
         padding: 20px;
         list-style-type: none;
@@ -105,10 +107,8 @@
               font-weight: 500;
               letter-spacing: 1px;
         }
-        .in-catalog-prive{
+        .in-catalog-price{
               display: block;
-              font-size: 22px;
-              color: darker($fircolor,20%);
               margin: 10px 0 0 0;
         }
         .catalog-path{

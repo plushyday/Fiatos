@@ -1,4 +1,3 @@
-$secolor:#F1D302;
 $fircolor:#31708f;
 $path: "./font/fonts" !default;
 @mixin fontdef($font, $FontType, $path:"./font/fonts") {
@@ -80,6 +79,7 @@ path{
     }
     .smart-menu{
       display: inline;
+      letter-spacing: 1px;
     }
         @include media(760){
           float: none;
@@ -155,7 +155,7 @@ path{
         }
     }
   }
-.catalogue {
+.cat {
   float: left;
   margin-top: 20px;
   font-size: 1.5em;
@@ -169,8 +169,7 @@ path{
   -webkit-transition:all 0.15s ease-in-out;
   transition: all 0.15s ease-in-out;
   &:hover {
-    background-color: $secolor;
-    
+    background-color: lighten($fircolor,20%);
     text-decoration: none;
     a{
       color: #000;
@@ -180,7 +179,7 @@ path{
     color: #fff;
   }
 }
-.menu-node:not(.catalogue) {
+.menu-node:not(.cat) {
   float: left;
   line-height: 1.5;
   margin-top: 23px;
@@ -192,8 +191,15 @@ path{
   color: #6D6D6D;
   -webkit-transition:all 0.15s ease-in-out;
   transition: all 0.15s ease-in-out;
+  a{
+    -webkit-transition:all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+    color: inherit;
+  }
   &:hover{
-    color: $secolor;
+    a{
+    color: lighten($fircolor,20%);
+    }
   }
 }
 .menu-basket-media{
@@ -216,7 +222,7 @@ path{
 }
 #shop_basket:hover{
   .bask0{
-    fill:lighten($secolor, 30%);
+    fill:lighten($fircolor, 30%);
   }
 }
 #shop_basket, #magnifier{
@@ -234,7 +240,7 @@ path{
   }
   &:hover{
     .magn0{
-      fill: $secolor;
+      fill: lighten($fircolor,20%);
     }
   }
 }
@@ -433,3 +439,4 @@ path{
 
 @import "_catalog.scss";
 @import "_slider.scss";
+@import "_item.scss";

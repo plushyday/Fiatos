@@ -119,23 +119,6 @@ $('.slider').each(function(){
 
 //RANDOM COLOR
 
-// var obj=[
-// "rgb(156,156,156)",
-// "rgb(147,161,153)",
-// "rgb(180,170,140)",
-// "rgb(131,177,190)",//
-// "rgb(155,173,140)",
-// "rgb(163,170,148)",
-// "rgb(125,178,172)",
-// "rgb(127,186,216)",
-// "rgb(125,158,178)",
-// "rgb(125,178,146)",
-// "rgb(148,163,170)",
-// "rgb(167,171,184)",
-// "rgb(172,167,184)",
-// "rgb(184,167,171)",
-// "rgb(195,169,149)"];
-
 var obj =[
 "rgb(160, 52, 52)",
 "rgb(71,159,222)",
@@ -181,11 +164,16 @@ svgcolor.each(function(){
   $(this).css({"fill":randcolor});
   obj.splice(rand, 1);
 });
-//RANDOM COLOR END 
- $('.collapse').collapse({
-      toggle: false
-    });
-
+//RANDOM COLOR END
+//SLIDES-ITEM
+for(var i=0; i<=$(".slides-item li").length; i++){
+$(".slides-item li").eq(i).on("mouseover", function(){
+  $(this).children().addClass('relative');
+});
+$(".slides-item li").eq(i).on("mouseleave", function(){
+  $(this).children().removeClass('relative');
+});
+}
 });
 
 
