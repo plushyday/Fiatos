@@ -165,15 +165,15 @@ svgcolor.each(function(){
   obj.splice(rand, 1);
 });
 //RANDOM COLOR END
-//SLIDES-ITEM
-for(var i=0; i<=$(".slides-item li").length; i++){
-$(".slides-item li").eq(i).on("mouseover", function(){
-  $(this).children().addClass('relative');
-});
-$(".slides-item li").eq(i).on("mouseleave", function(){
-  $(this).children().removeClass('relative');
-});
-}
+// //SLIDES-ITEM
+// for(var i=0; i<=$(".slides-item li").length; i++){
+// $(".slides-item li").eq(i).on("mouseover", function(){
+//   $(this).children().addClass('relative');
+// });
+// $(".slides-item li").eq(i).on("mouseleave", function(){
+//   $(this).children().removeClass('relative');
+// });
+// }
 });
 
 

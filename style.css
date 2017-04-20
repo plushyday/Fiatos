@@ -352,6 +352,46 @@ path {
       color: #fff;
       border-radius: 0px;
       cursor: pointer; }
+      .list-group .list-group-item:hover:before, .list-group .list-group-item:hover:after {
+        content: '';
+        position: absolute;
+        -webkit-transition: -webkit-transform .5s ease;
+        transition: -webkit-transform .5s ease;
+        transition: transform .5s ease;
+        transition: transform .5s ease, -webkit-transform .5s ease; }
+      .list-group .list-group-item:hover:before {
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background: #31708f; }
+      .list-group .list-group-item:hover .list-bottom .basket {
+        border-color: #fff;
+        color: #fff; }
+      .list-group .list-group-item:hover .list-left .title {
+        color: #fff; }
+        .list-group .list-group-item:hover .list-left .title:before, .list-group .list-group-item:hover .list-left .title:after {
+          content: '';
+          position: absolute;
+          -webkit-transition: -webkit-transform .5s ease;
+          transition: -webkit-transform .5s ease;
+          transition: transform .5s ease;
+          transition: transform .5s ease, -webkit-transform .5s ease; }
+        .list-group .list-group-item:hover .list-left .title:before {
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 2px;
+          background: #84bad5;
+          -webkit-transform: scaleX(0);
+          transform: scaleX(0); }
+        .list-group .list-group-item:hover .list-left .title:hover:before {
+          -webkit-transform: scaleX(1);
+          transform: scaleX(1); }
+      .list-group .list-group-item:hover .list-left .in-catalog-price {
+        color: #fff; }
+      .list-group .list-group-item:hover .list-right .availability {
+        color: #fff; }
 
 .price-header {
   margin-bottom: 10px; }
@@ -377,6 +417,8 @@ path {
     margin: 0;
     border-radius: 0px;
     top: 68.5%; }
+  .catalog-content .content-list .list-cat {
+    position: relative; }
   .catalog-content .content-list li {
     background: #fcfcfd;
     margin-bottom: 30px;
@@ -408,12 +450,31 @@ path {
       float: right; }
       .catalog-content .content-list li .list-right .availability {
         word-wrap: normal; }
+    .catalog-content .content-list li .list-bottom {
+      bottom: 20px;
+      right: 20px;
+      position: absolute;
+      text-align: center;
+      width: 30%; }
+      .catalog-content .content-list li .list-bottom .basket {
+        display: block;
+        background-color: rgba(255, 255, 255, 0);
+        border-color: #34a8c8;
+        color: #34a8c8;
+        border: 3px solid;
+        padding: 13px 0;
+        text-align: center;
+        transition: all 200ms ease-in-out; }
+        .catalog-content .content-list li .list-bottom .basket:hover {
+          background-color: #196d1f;
+          border-color: #196d1f;
+          color: white; }
     .catalog-content .content-list li .title {
       overflow: hidden;
       word-wrap: break-word;
       font-size: 20px;
       text-decoration: none;
-      color: #000000;
+      color: #245269;
       font-weight: 500;
       letter-spacing: 1px; }
     .catalog-content .content-list li .in-catalog-price {
@@ -583,8 +644,23 @@ a.slide_btn {
     cursor: pointer;
     transition: all 200ms ease-in-out; }
     .slides-item li img {
+      width: 100%;
       transition: all 200ms ease-in-out; }
+      .slides-item li img:hover {
+        position: relative;
+        transform: scale(1.1, 1.1);
+        box-shadow: 0 0 0.6em #ccc;
+        -webkit-box-shadow: 0 0 0.6em #ccc;
+        -o-box-shadow: 0 0 0.6em #ccc;
+        -moz-box-shadow: 0 0 0.6em #ccc;
+        -ms-box-shadow: 0 0 0.6em #ccc; }
     .slides-item li .relative {
-      position: relative; }
+      position: relative;
+      transform: scale(1.1, 1.1);
+      box-shadow: 0 0 0.6em #ccc;
+      -webkit-box-shadow: 0 0 0.6em #ccc;
+      -o-box-shadow: 0 0 0.6em #ccc;
+      -moz-box-shadow: 0 0 0.6em #ccc;
+      -ms-box-shadow: 0 0 0.6em #ccc; }
 
 /*# sourceMappingURL=style.css.map */

@@ -29,10 +29,28 @@
 		cursor: pointer;
 		transition: all 200ms ease-in-out;
 		img{
+			width: 100%;
 			transition: all 200ms ease-in-out;
+			&:hover{
+				position: relative;
+			transform: scale(1.1,1.1);
+			
+			box-shadow: 0 0 0.6em #ccc;
+        -webkit-box-shadow: 0 0 0.6em #ccc;
+        -o-box-shadow: 0 0 0.6em #ccc;
+        -moz-box-shadow: 0 0 0.6em #ccc;
+        -ms-box-shadow: 0 0 0.6em #ccc;
+			}
 		}
 		.relative{
 			position: relative;
+			transform: scale(1.1,1.1);
+			
+			box-shadow: 0 0 0.6em #ccc;
+        -webkit-box-shadow: 0 0 0.6em #ccc;
+        -o-box-shadow: 0 0 0.6em #ccc;
+        -moz-box-shadow: 0 0 0.6em #ccc;
+        -ms-box-shadow: 0 0 0.6em #ccc;
 		}
 	}
 }
