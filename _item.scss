@@ -1,39 +1,93 @@
 .item-container{
-	padding: 15px;
-    border: 1px solid #eee;
-    overflow: hidden;
-    p{
-    	    font-size: 13px;
-		    color: #929292;
-		    margin: 15px 0;
-		    word-spacing: 3px;
-		    font-size: 1em;
-		    i{
+	    background-color: #fff;
+		box-shadow: 0 0 0.6em #ccc;
+		padding: 15px;
+		border: 1px solid #eee;
+		overflow: hidden;
+		margin-bottom: 2%;
+			.basket{
+                display: block;
+                cursor: pointer;
+                margin-top: 13px;
+                background-color: rgba(255,255,255,0);
+                border-color: rgb(52,168,200);
+                color: rgb(52,168,200);
+                border: 3px solid;
+                padding: 13px 0;
+                text-align: center;
+                -webkit-transition: all 200ms ease-in-out;
+                transition: all 200ms ease-in-out;
+			                    &:before, &:after {
+					                content: '';
+					                position: absolute;
+					                -webkit-transition: -webkit-transform .5s ease;
+					                transition: -webkit-transform .5s ease;
+					                transition: transform .5s ease;
+					                transition: transform .5s ease, -webkit-transform .5s ease;
+					              }
+			              &:before {
+			                left: 15px;
+			                bottom: 0;
+			                width: 85%;
+			                height: 2px;
+			                background: darken(#46656d,10%);
+			                -webkit-transform:  scaleX(0);
+			                        transform:  scaleX(0);
+			              }
+			              &:hover:before {
+			                -webkit-transform:  scaleX(1);
+			                        transform:  scaleX(1);
+			              }
+                &:hover{
+                      background-color: #46656d;
+                      border-color: #46656d;
+                      color: rgb(255,255,255);
+
+                }
+            }
+		.availability{
+			float: right;
+			font-size: 1.2em;
+			 word-spacing: 3px;
+			i{
 		    	color: $fircolor;
 		    	padding-right: 5px;
 		    }
+		}
+        p{
+		    color: #929292;
+		    margin: 15px 0;
+		   
+		    font-size: 1em;
+		    
+    }
+    .title{
+    	text-align: center;
     }
 }
 .breadcrumb{
-	background-color: #FFFFFF;
     border: 1px solid #F3F3F3;
     padding: 10px 15px;
 }
 .slides-item{
 	padding: 0;
+	text-align: center;
 	position: relative;
 	li{
-		list-style-type: none;
-		float: left;
-		width: 20%;
-		cursor: pointer;
-		transition: all 200ms ease-in-out;
+		    width: 15%;
+		    display: inline-block;
+		    list-style-type: none;
+		    cursor: pointer;
+		    -webkit-transition: all 200ms ease-in-out;
+		    transition: all 200ms ease-in-out;
 		img{
 			width: 100%;
+			-webkit-transition: all 200ms ease-in-out;
 			transition: all 200ms ease-in-out;
 			&:hover{
 				position: relative;
-			transform: scale(1.1,1.1);
+			-webkit-transform: scale(1.1,1.1);
+			        transform: scale(1.1,1.1);
 			
 			box-shadow: 0 0 0.6em #ccc;
         -webkit-box-shadow: 0 0 0.6em #ccc;
@@ -44,7 +98,8 @@
 		}
 		.relative{
 			position: relative;
-			transform: scale(1.1,1.1);
+			-webkit-transform: scale(1.1,1.1);
+			        transform: scale(1.1,1.1);
 			
 			box-shadow: 0 0 0.6em #ccc;
         -webkit-box-shadow: 0 0 0.6em #ccc;

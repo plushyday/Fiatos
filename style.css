@@ -364,30 +364,30 @@ path {
         bottom: 0;
         width: 100%;
         height: 2px;
-        background: #31708f; }
+        background: #46656d; }
       .list-group .list-group-item:hover .list-bottom .basket {
         border-color: #fff;
         color: #fff; }
-      .list-group .list-group-item:hover .list-left .title {
-        color: #fff; }
-        .list-group .list-group-item:hover .list-left .title:before, .list-group .list-group-item:hover .list-left .title:after {
+        .list-group .list-group-item:hover .list-bottom .basket:before, .list-group .list-group-item:hover .list-bottom .basket:after {
           content: '';
           position: absolute;
           -webkit-transition: -webkit-transform .5s ease;
           transition: -webkit-transform .5s ease;
           transition: transform .5s ease;
           transition: transform .5s ease, -webkit-transform .5s ease; }
-        .list-group .list-group-item:hover .list-left .title:before {
+        .list-group .list-group-item:hover .list-bottom .basket:before {
           left: 0;
           bottom: 0;
           width: 100%;
           height: 2px;
-          background: #84bad5;
+          background: #32484e;
           -webkit-transform: scaleX(0);
           transform: scaleX(0); }
-        .list-group .list-group-item:hover .list-left .title:hover:before {
+        .list-group .list-group-item:hover .list-bottom .basket:hover:before {
           -webkit-transform: scaleX(1);
           transform: scaleX(1); }
+      .list-group .list-group-item:hover .list-left .title {
+        color: #fff; }
       .list-group .list-group-item:hover .list-left .in-catalog-price {
         color: #fff; }
       .list-group .list-group-item:hover .list-right .availability {
@@ -443,19 +443,29 @@ path {
       width: 20%;
       background-color: #fff; }
     .catalog-content .content-list li .list-left {
-      width: 60%;
       margin-left: 3%;
       float: left; }
     .catalog-content .content-list li .list-right {
       float: right; }
       .catalog-content .content-list li .list-right .availability {
         word-wrap: normal; }
+      .catalog-content .content-list li .list-right .sale {
+        text-align: center;
+        padding: 5% 0;
+        font-size: 1.5em;
+        color: #a94442; }
     .catalog-content .content-list li .list-bottom {
       bottom: 20px;
       right: 20px;
       position: absolute;
       text-align: center;
       width: 30%; }
+      @media screen and (max-width: 1260px) {
+        .catalog-content .content-list li .list-bottom {
+          bottom: 0;
+          right: 0;
+          width: 100%;
+          position: relative; } }
       .catalog-content .content-list li .list-bottom .basket {
         display: block;
         background-color: rgba(255, 255, 255, 0);
@@ -464,10 +474,11 @@ path {
         border: 3px solid;
         padding: 13px 0;
         text-align: center;
+        -webkit-transition: all 200ms ease-in-out;
         transition: all 200ms ease-in-out; }
         .catalog-content .content-list li .list-bottom .basket:hover {
-          background-color: #196d1f;
-          border-color: #196d1f;
+          background-color: #46656d;
+          border-color: #46656d;
           color: white; }
     .catalog-content .content-list li .title {
       overflow: hidden;
@@ -616,38 +627,82 @@ a.slide_btn {
   .next_btn {
     right: 50px; } }
 .item-container {
+  background-color: #fff;
+  box-shadow: 0 0 0.6em #ccc;
   padding: 15px;
   border: 1px solid #eee;
-  overflow: hidden; }
-  .item-container p {
-    font-size: 13px;
-    color: #929292;
-    margin: 15px 0;
-    word-spacing: 3px;
-    font-size: 1em; }
-    .item-container p i {
+  overflow: hidden;
+  margin-bottom: 2%; }
+  .item-container .basket {
+    display: block;
+    cursor: pointer;
+    margin-top: 13px;
+    background-color: rgba(255, 255, 255, 0);
+    border-color: #34a8c8;
+    color: #34a8c8;
+    border: 3px solid;
+    padding: 13px 0;
+    text-align: center;
+    -webkit-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out; }
+    .item-container .basket:before, .item-container .basket:after {
+      content: '';
+      position: absolute;
+      -webkit-transition: -webkit-transform .5s ease;
+      transition: -webkit-transform .5s ease;
+      transition: transform .5s ease;
+      transition: transform .5s ease, -webkit-transform .5s ease; }
+    .item-container .basket:before {
+      left: 15px;
+      bottom: 0;
+      width: 85%;
+      height: 2px;
+      background: #32484e;
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0); }
+    .item-container .basket:hover:before {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1); }
+    .item-container .basket:hover {
+      background-color: #46656d;
+      border-color: #46656d;
+      color: white; }
+  .item-container .availability {
+    float: right;
+    font-size: 1.2em;
+    word-spacing: 3px; }
+    .item-container .availability i {
       color: #31708f;
       padding-right: 5px; }
+  .item-container p {
+    color: #929292;
+    margin: 15px 0;
+    font-size: 1em; }
+  .item-container .title {
+    text-align: center; }
 
 .breadcrumb {
-  background-color: #FFFFFF;
   border: 1px solid #F3F3F3;
   padding: 10px 15px; }
 
 .slides-item {
   padding: 0;
+  text-align: center;
   position: relative; }
   .slides-item li {
+    width: 15%;
+    display: inline-block;
     list-style-type: none;
-    float: left;
-    width: 20%;
     cursor: pointer;
+    -webkit-transition: all 200ms ease-in-out;
     transition: all 200ms ease-in-out; }
     .slides-item li img {
       width: 100%;
+      -webkit-transition: all 200ms ease-in-out;
       transition: all 200ms ease-in-out; }
       .slides-item li img:hover {
         position: relative;
+        -webkit-transform: scale(1.1, 1.1);
         transform: scale(1.1, 1.1);
         box-shadow: 0 0 0.6em #ccc;
         -webkit-box-shadow: 0 0 0.6em #ccc;
@@ -656,6 +711,7 @@ a.slide_btn {
         -ms-box-shadow: 0 0 0.6em #ccc; }
     .slides-item li .relative {
       position: relative;
+      -webkit-transform: scale(1.1, 1.1);
       transform: scale(1.1, 1.1);
       box-shadow: 0 0 0.6em #ccc;
       -webkit-box-shadow: 0 0 0.6em #ccc;
