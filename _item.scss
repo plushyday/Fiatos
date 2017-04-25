@@ -17,27 +17,6 @@
                 text-align: center;
                 -webkit-transition: all 200ms ease-in-out;
                 transition: all 200ms ease-in-out;
-			                    &:before, &:after {
-					                content: '';
-					                position: absolute;
-					                -webkit-transition: -webkit-transform .5s ease;
-					                transition: -webkit-transform .5s ease;
-					                transition: transform .5s ease;
-					                transition: transform .5s ease, -webkit-transform .5s ease;
-					              }
-			              &:before {
-			                left: 15px;
-			                bottom: 0;
-			                width: 85%;
-			                height: 2px;
-			                background: darken(#46656d,10%);
-			                -webkit-transform:  scaleX(0);
-			                        transform:  scaleX(0);
-			              }
-			              &:hover:before {
-			                -webkit-transform:  scaleX(1);
-			                        transform:  scaleX(1);
-			              }
                 &:hover{
                       background-color: #46656d;
                       border-color: #46656d;
