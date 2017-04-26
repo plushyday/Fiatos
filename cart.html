@@ -13,7 +13,7 @@
 	
 </head>
 <body>
-	<div class="container-fluid">
+	<div class="container-fluid head">
       	<div class="row">
 			<div class="col-lg-10 col-lg-offset-1 col-xs-12">
 				<div class="logo">
@@ -156,40 +156,112 @@
 <div class="categories-section">
 <div class="container-fluid">
 		<div class="row">
-			<div class="col-md-10 col-md-offset-1 catalog-content">
-										<ul class="list-group content-list">
-										  <li class="list-group-item list-cat">
-										  <a href="item.html">
-									<img src="LD-210c_270x270_a.jpg" title="" alt="">
-									<section class="list-left">
+			<div class="col-md-10 col-md-offset-1 basket-content">
+			<h1 class="cart-title">Ваша корзина</h1>
+								<ul class="list-group basket-list">
+									<li class="list-group-item row">
+										<div class="col-md-1">
+											<label class="checkbox-label">
+										      <input type="checkbox" class="checkbox-custom" id="checkbox-1">
+										    </label>
+										</div>
+										<div class="col-md-1 text-center">
+									<img width="70" src="LD-210c_270x270_a.jpg" title="" alt="">
+										</div>
+										<div class="col-md-3 info-cart">
 									<h5 class="title">Ингалятор компрессорный 55</h5>
-									<span class="in-catalog-price">$290</span>
-									<p class="catalog-path">Ингаляторы » Компрессорные</p>
-									</section>
-									<section class="list-right">
-									<span class="availability">В наличии</span>
-									</section>
-									<div class="clearfix"></div>
-										  </a></li>
-										  <li class="list-group-item"><a href="">
-									<img src="LD-210c_270x270_a.jpg" title="" alt="">
-									<section class="list-left">
+										</div>
+										<div class="col-md-2 availability-cart">
+									<h5>Скоро будет в наличии</h5>
+										</div>
+										<div class="col-md-2 quantity-cart">
+											        <input type="text" name="qty" maxlength="12" value="1" title="" class="input-text">
+											        <div class="qty_inc_dec">
+											          <i class="increment" onclick="incrementQty()">+</i>
+											          <i class="decrement" onclick="decrementQty()">-</i>
+											        </div>
+											
+										</div>
+										<div class="col-md-2 last-cart">
+									<h5>160.55 руб</h5>
+										</div>
+										<div class="col-md-1 last-cart">
+									<button type="button" class="btn btn-default">Удалить</button>
+										</div>
+										  </li>
+										  <li class="list-group-item row">
+										<div class="col-md-1">
+											<label class="checkbox-label">
+										      <input type="checkbox" class="checkbox-custom" id="checkbox-1">
+										    </label>
+										</div>
+										<div class="col-md-1 text-center">
+									<img width="70" src="LD-210c_270x270_a.jpg" title="" alt="">
+										</div>
+										<div class="col-md-3 info-cart">
 									<h5 class="title">Ингалятор компрессорный 55</h5>
-									<span class="in-catalog-price">$290</span>
-									<p class="catalog-path">Ингаляторы » Компрессорные</p>
-									</section>
-									<section class="list-right">
-									<span class="availability">Скоро будет в наличии</span>
-									<p class="sale">Скидка!</p>
-									</section>
-									<div class="clearfix"></div>
-										  </a></li>
+										</div>
+										<div class="col-md-2 availability-cart">
+									<h5>Скоро будет в наличии</h5>
+										</div>
+										<div class="col-md-2 quantity-cart">
+											        <input type="text" name="qty" maxlength="12" value="1" title="" class="input-text">
+											        <div class="qty_inc_dec">
+											          <i class="increment" onclick="incrementQty()">+</i>
+											          <i class="decrement" onclick="decrementQty()">-</i>
+											        </div>
+											
+										</div>
+										<div class="col-md-2 last-cart">
+									<h5>160.55 руб</h5>
+										</div>
+										<div class="col-md-1 last-cart">
+									<button type="button" class="btn btn-default">Удалить</button>
+										</div>
+										  </li>
+										  <li class="list-group-item row">
+										<div class="col-md-1">
+											<label class="checkbox-label">
+										      <input type="checkbox" class="checkbox-custom" id="checkbox-1">
+										    </label>
+										</div>
+										<div class="col-md-1 text-center">
+									<img width="70" src="LD-210c_270x270_a.jpg" title="" alt="">
+										</div>
+										<div class="col-md-3 info-cart">
+									<h5 class="title">Ингалятор компрессорный 55</h5>
+										</div>
+										<div class="col-md-2 availability-cart">
+									<h5>Скоро будет в наличии</h5>
+										</div>
+										<div class="col-md-2 quantity-cart">
+											        <input type="text" name="qty" maxlength="12" value="1" title="" class="input-text">
+											        <div class="qty_inc_dec">
+											          <i class="increment" onclick="incrementQty()">+</i>
+											          <i class="decrement" onclick="decrementQty()">-</i>
+											        </div>
+											
+										</div>
+										<div class="col-md-2 last-cart">
+									<h5>160.55 руб</h5>
+										</div>
+										<div class="col-md-1 last-cart">
+									<button type="button" class="btn btn-default">Удалить</button>
+										</div>
+										  </li>
 										</ul>
-									<div class="ajax-filter-count" data-count="3">
-					<a href="#" class="ajax-more">Загрузить еще 2 из 15</a></div>
-									</div>
+											<div>
+												<div class="col-md-3 col-md-offset-9 sum-cart">
+													<span>Итого: </span><span id="total-cart">300.00</span></div>
+											</div>
+											<div class="row">
+												<div class="col-md-3 col-md-offset-6"><button type="button" class="btn btn-cart btn-danger">Удалить выделенные</button></div>
+												<div class="col-md-3"><button type="button" class="btn btn-cart btn-success">Оформить</button></div>
+											</div>
 		</div>
+	</div>
 </div>
+
 		<div class="container-fluid">
       		<div class="row pre-footer">
       			<article class="text-center col-md-5 col-xs-12" id="about_us">
@@ -350,6 +422,33 @@
 				<div class="clearfix"></div>
 			</div>
 		</footer>
-   
+   <script type="text/javascript">
+											  				function incrementQty() {
+															    var value = document.querySelector('input[name="qty"]').value;
+															    var cardQty = document.querySelector('.cart-qty');
+															    value = isNaN(value) ? 1 : value;
+															    value++;
+															    document.querySelector('input[name="qty"]').value = value;
+															    cardQty.innerHTML = value;
+															    cardQty.classList.add('rotate-x');
+															  }
+
+															  function decrementQty() {
+															    var value = document.querySelector('input[name="qty"]').value;
+															    var cardQty = document.querySelector('.cart-qty');
+															    value = isNaN(value) ? 1 : value;
+															    value > 1 ? value-- : value;
+															    document.querySelector('input[name="qty"]').value = value;
+															    cardQty.innerHTML = value;
+															    cardQty.classList.add('rotate-x');
+															  }
+
+															  function removeAnimation(e) {
+															    e.target.classList.remove('rotate-x');
+															  }
+
+															  const counter = document.querySelector('.cart-qty');
+															  counter.addEventListener("animationend", removeAnimation);
+													  </script>
 </body>
 </html>

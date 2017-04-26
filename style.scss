@@ -40,6 +40,9 @@ body{
      text-decoration: none;
   }
 }
+.head{
+      border-bottom: 2px solid #f2f2f2;
+}
 path{
  shape-rendering: geometricPrecision;
 }
@@ -88,6 +91,7 @@ path{
           display: block;
           width: 50%;
           float: right;
+          -webkit-transition:opacity 300ms;
           transition: opacity 300ms;
                   .bar {
                   display: block;
@@ -98,23 +102,24 @@ path{
                   }
                 }
           .menu-toggle{
-          	.bars{
-          		width: 0;
-          		opacity: 0;
-          		.bar{
-          		border-right-style: none;
-          		}
-          	}
+            .bars{
+              width: 0;
+              opacity: 0;
+              .bar{
+              border-right-style: none;
+              }
+            }
            .cross{
-           		transition: all 300ms;
-           	    float: right;
-			    margin-right: 10%;
-			    font-size: 80px;
-			    font-weight: 900;
-			    line-height: 1;
-			    color: #000;
+              -webkit-transition:all 300ms;
+              transition: all 300ms;
+                float: right;
+          margin-right: 10%;
+          font-size: 80px;
+          font-weight: 900;
+          line-height: 1;
+          color: #000;
             &:after{
-            	content: "\2715";
+              content: "\2715";
             }
         }
      }
@@ -319,10 +324,10 @@ path{
               text-align: center;
               height: 35px;
               margin-top: 20px;
-              	@include media(760){
-              		font-size: 14px;
-              		font-weight: bold;
-              	}
+                @include media(760){
+                  font-size: 14px;
+                  font-weight: bold;
+                }
             }
           &:hover{
             background-color:#2E6171;
@@ -370,16 +375,16 @@ path{
       }
     }
   #about_us{
-  	@include media(760){
-  		display: none;
-  	}
+    @include media(760){
+      display: none;
+    }
   }
 }
 .contact-article{
-// border-left: 2px solid $fircolor;
+/* border-left: 2px solid $fircolor;*/
   address{
-    // border: 2px solid $fircolor;
-    // background-color:#75B09C;
+    /* border: 2px solid $fircolor;*/
+    /* background-color:#75B09C;*/
       
       .location {
       margin-top: 1em;
@@ -411,9 +416,9 @@ path{
       }
     }
   }
-  // .line{
-  //   border-top: 2px solid $fircolor;
-  // }
+  /* .line{*/
+  /*   border-top: 2px solid $fircolor;*/
+  /* }*/
 }
 .footer-logo{
   svg{
@@ -447,3 +452,4 @@ path{
 @import "_catalog.scss";
 @import "_slider.scss";
 @import "_item.scss";
+@import "_cart.scss";

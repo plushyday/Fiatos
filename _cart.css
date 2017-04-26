@@ -1,0 +1,140 @@
+.checkbox-custom {
+  position: relative;
+  cursor: pointer; }
+  .checkbox-custom:before {
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    width: 3.1em;
+    height: 3.1em;
+    border: 2px solid #f2f2f2; }
+  .checkbox-custom:checked:before {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    height: 2em;
+    border-color: green;
+    border-top-style: none;
+    border-right-style: none; }
+  .checkbox-custom:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    border: 2px solid #8598a0;
+    width: 3.1em;
+    height: 3.1em;
+    background: #fff;
+    cursor: pointer; }
+
+.checkbox-label {
+  position: relative;
+  margin: 0.5em;
+  font-family: Arial, sans-serif;
+  line-height: 135%;
+  cursor: pointer; }
+
+.info-cart {
+  margin-left: 2%;
+  padding: 1% 0 0 0; }
+  .info-cart .title {
+    color: #3b5f69;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase; }
+
+.availability-cart {
+  padding: 1.5% 0 0 0; }
+  .availability-cart h5 {
+    color: #666;
+    text-align: center;
+    font-size: 10px;
+    text-transform: uppercase; }
+
+.qty {
+  float: left;
+  width: 80px;
+  margin-right: 10px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.qty_inc_dec .increment, .qty_inc_dec
+.decrement {
+  float: left;
+  text-align: center;
+  width: 30px;
+  cursor: pointer;
+  font-size: 1.2em;
+  font-style: normal;
+  line-height: 20px;
+  height: 25px;
+  vertical-align: middle;
+  background-color: #fff;
+  border: 1px solid #ccc; }
+
+.qty_inc_dec .increment {
+  border-bottom: 0;
+  line-height: 25px; }
+
+.qty_inc_dec {
+  float: left;
+  width: 10px;
+  height: 50px;
+  display: inline-block; }
+
+input[type="text"] {
+  float: left;
+  font-family: "Open Sans", sans-serif;
+  outline: 0;
+  font-size: 1.2em;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  color: #2a2a2a;
+  line-height: 40px;
+  border: 1px solid #ccc;
+  border-right: 0; }
+
+button[type="button"] {
+  cursor: pointer;
+  width: 168px;
+  border: none;
+  color: #2a2a2a;
+  background: #fff;
+  height: 50px;
+  font-size: 1.2em;
+  font-family: 'Open Sans', sans-serif;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  border: 1px solid #ccc;
+  box-shadow: 0 1px 2px #fff; }
+  button[type="button"]:hover {
+    box-shadow: 0 1px 2px #cbc3ba; }
+  button[type="button"]:active, button[type="button"]:focus {
+    outline: none; }
+
+.rotate-x {
+  -webkit-animation-duration: .6s;
+  animation-duration: .6s;
+  -webkit-animation-name: rotate-x;
+  animation-name: rotate-x; }
+
+@-webkit-keyframes rotate-x {
+  from {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg); }
+  to {
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg); } }
+@keyframes rotate-x {
+  from {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg); }
+  to {
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg); } }
+
+/*# sourceMappingURL=_cart.css.map */
