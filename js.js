@@ -16,6 +16,7 @@ $(".menu-mobile").click(function(){$(".bars").parent().toggleClass('menu-toggle'
 //SEARCH ACTIVATION START
 $("#magnifier").on('click', function () {
 	$("#search").addClass('activate-search');
+  $("input[type=search]").focus();
 });
 
 $(".et-search-field").on('blur', function () {

@@ -1,3 +1,11 @@
+ .list-group-item-cart{
+  margin: 1%;
+    &:hover{
+          box-shadow: 0 0 0.6em #ccc;
+          background-color: #f6f6f7;
+          cursor: pointer;
+    }
+ }
 .checkbox-custom {
   position: relative;
   cursor: pointer;
@@ -64,7 +72,7 @@
    
 }
  .availability-cart{
-     padding: 1% 0 0 0;
+     padding: 1.3% 0 0 0;
         h5{
         color: #666;
         text-align: center;
@@ -79,6 +87,23 @@
             height: 40px;
             padding: 0;
         }
+        input[type="text"] {
+    float: left;
+    font-family: 'Open Sans';
+    outline: 0;
+    font-size: 1.2em;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    color: #2a2a2a;
+    line-height: 40px;
+    border: 1px solid #ccc;
+    border-right: 0;
+    background-color: #f5f6f5;
+     @include media(991){
+            width: 50%;
+        }
+}
 }
 
 .increment,
@@ -118,25 +143,9 @@
         }
 }
 
-input[type="text"] {
-    float: left;
-    font-family: 'Open Sans';
-    outline: 0;
-    font-size: 1.2em;
-    text-align: center;
-    width: 50px;
-    height: 50px;
-    color: #2a2a2a;
-    line-height: 40px;
-    border: 1px solid #ccc;
-    border-right: 0;
-    background-color: #f5f6f5;
-     @include media(991){
-            width: 50%;
-        }
-}
+
  .last-cart{
-      padding: 13px 0 0 15px;
+      padding: 13px 0 0 0;
       @include media(991){
              text-align: center;
              padding: 13px 0 0 0;
@@ -160,6 +169,12 @@ input[type="text"] {
  .btn-cart{
     width: 100%;
     margin: 5% 0;
+    background-color: #95a5a6;
+    border-color: #95a5a6;
+    @include media(760){
+          padding: 5%;
+          margin: 1% 0;
+    }
  }
  .cart-title{
     text-align: right;

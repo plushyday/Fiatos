@@ -150,36 +150,31 @@ path{
               -webkit-transition: background .2s;
               transition: background .2s;
               position: relative;
-                      &:hover{ background: #1d5a77;
+                      &:hover{ 
+                  background: #1d5a77;
                   border-top: 1px solid #1f253d;
                 }
                 a{
                   color: #fff;
                 }
         }
+        .cat{
+            background: #183b4c;
+        }
     }
   }
 .cat {
-  background-color: $fircolor;
-  padding: 6px 20px;
-  text-decoration: none;
-  margin-right: 20px;
   -webkit-transition:all 0.15s ease-in-out;
   transition: all 0.15s ease-in-out;
-  margin-top: 17px !important;
   a{
-    color: #f5f5f5 !important;
-  }
-  &:hover {
-    background-color: lighten($fircolor,20%);
-    text-decoration: none;
-    a{
+    color: $fircolor !important;
+    text-decoration: overline;
+     @include media(760){
       color: #fff !important;
+      text-decoration: none;
     }
   }
-  @include media(760){
-    margin-top: 0 !important;
-  }
+ 
 }
 .menu-node{
   float: left;
@@ -360,7 +355,7 @@ path{
  .pre-footer{
   padding: 60px 0;
   background-color:#6695a2;
-    h1{
+    h2{
       color: #fff;
     }
     section{

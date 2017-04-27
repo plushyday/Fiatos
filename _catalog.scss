@@ -2,10 +2,21 @@
   .panel{
     border-radius: 0px;
         background-color: #f5f5f5;
+    .panel-heading{
+        border-radius: 0px;
+    }
     .panel-heading-hover{
-      &:hover{
         background-color: #3c3d41;
         color: #fff;
+    }
+    a[aria-expanded="false"]{
+      .panel-heading-hover{
+        color: #040404;
+        background-color: #f5f6f5;
+        &:hover{
+          background-color: #3c3d41;
+          color: #fff;
+        }
       }
     }
     &+.panel{
@@ -21,14 +32,24 @@
     }
   }
 }
-
+.list-group-item{
+    border-radius: 0px !important;
+  }
+.collapse{
+  .list-group-item-new{
+    &:before{
+      content: '\268A\00a0';
+    }
+  }
+}
 .list-group{
   margin:0px;
+
   .list-group-item-new{
-     border-radius: 0px;
+     
      &:hover{
         background: lighten(#6695a2, 10%);
-        color: #fff;
+        color: $fircolor;
         border-radius: 0px;
         cursor: pointer;
            &:before, &:after {
@@ -250,4 +271,9 @@
   }
 }
 }
+}
+#accordion{
+      padding: 0;
+    box-shadow: 0 0 0.6em #ccc;
+    -webkit-box-shadow: 0 0 0.6em #ccc;
 }
