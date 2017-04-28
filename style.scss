@@ -36,6 +36,10 @@ $path: "./font/fonts" !default;
 body{
   background-color:#f5f6f5;
   font-family: "Open Sans";
+      position: relative;
+      margin-bottom: 180px;
+    min-height: calc(100vh - 180px);
+    width: 100%;
    a:hover{
      text-decoration: none;
   }
@@ -129,7 +133,7 @@ path{
       display: none;
     }
               }
-    
+   
     #smart-menu-active{
           margin-bottom: 25px;
           background: #2b696f;
@@ -137,7 +141,7 @@ path{
           display: block;
           position: absolute;
           width: 100%;
-          top: 75px;
+          top: 77px;
           z-index: 10;
         span{
           width: 100%;
@@ -156,7 +160,16 @@ path{
                 }
                 a{
                   color: #fff;
+                  position: absolute;
+                  top: 0;
+                  text-indent: 6%;
+                  right: 0;
+                  bottom: 0;
+                  left: 0;
                 }
+            &:last-child{
+              border-bottom: none;
+            }
         }
         .cat{
             background: #183b4c;
@@ -201,11 +214,12 @@ path{
 .menu-basket-media{
   @include media(760){
       margin-top:0 !important;
+       margin-left: 5%;
     }
 }
 #shop_basket{
   @include media(760){
-      width: 100px !important;
+      width: 90px !important;
       path{
         fill: darken($fircolor,15%);
       }
@@ -355,6 +369,9 @@ path{
  .pre-footer{
   padding: 60px 0;
   background-color:#6695a2;
+      @include media(760){
+                padding: 0;
+              }
     h2{
       color: #fff;
     }
@@ -363,15 +380,22 @@ path{
       font-size: 1.5em;
       padding: 0 20%;
       color: $fircolor;
+         @include media(760){
+            padding: 0;
+          }
             .text-style{
         margin: 20px 0 0 0;
         color: #fff;
         font-size: 1.3em;
+              @include media(760){
+          font-size: 20px;
+        }
       }
     }
   #about_us{
     @include media(760){
-      display: none;
+          background-color: #31708f;;
+          padding-bottom: 7%;
     }
   }
 }
@@ -431,6 +455,10 @@ path{
 .footer-bottom {
     background: #3c3d41;
     padding: 30px 0;
+    position: absolute;
+    top: 100%;
+    height: 180px;
+    width: 100%;
     p {
     margin: 20px 0 0 0;
     color: #fff;
