@@ -179,8 +179,8 @@
 										<div class="col-md-2 quantity-cart">
 											        <input type="text" name="qty" maxlength="12" value="1" title="" class="input-text">
 											        <div class="qty_inc_dec">
-											          <i class="increment" onclick="incrementQty()">+</i>
-											          <i class="decrement" onclick="decrementQty()">-</i>
+											          <i class="increment" onclick="incrementQty(this)">+</i>
+											          <i class="decrement" onclick="decrementQty(this)">-</i>
 											        </div>
 											
 										</div>
@@ -209,8 +209,8 @@
 										<div class="col-md-2 quantity-cart">
 											        <input type="text" name="qty" maxlength="12" value="1" title="" class="input-text">
 											        <div class="qty_inc_dec">
-											          <i class="increment" onclick="incrementQty()">+</i>
-											          <i class="decrement" onclick="decrementQty()">-</i>
+											          <i class="increment" onclick="incrementQty(this)">+</i>
+											          <i class="decrement" onclick="decrementQty(this)">-</i>
 											        </div>
 											
 										</div>
@@ -239,8 +239,8 @@
 										<div class="col-md-2 quantity-cart">
 											        <input type="text" name="qty" maxlength="12" value="1" title="" class="input-text">
 											        <div class="qty_inc_dec">
-											          <i class="increment" onclick="incrementQty()">+</i>
-											          <i class="decrement" onclick="decrementQty()">-</i>
+											          <i class="increment" onclick="incrementQty(this)">+</i>
+											          <i class="decrement" onclick="decrementQty(this)">-</i>
 											        </div>
 											
 										</div>
@@ -345,31 +345,28 @@
    
 </body>
 <script type="text/javascript">
-											  				function incrementQty() {
-															    var value = document.querySelector('input[name="qty"]').value;
-															    var cardQty = document.querySelector('.cart-qty');
-															    value = isNaN(value) ? 1 : value;
-															    value++;
-															    document.querySelector('input[name="qty"]').value = value;
-															    cardQty.innerHTML = value;
-															    cardQty.classList.add('rotate-x');
-															  }
-
-															  function decrementQty() {
-															    var value = document.querySelector('input[name="qty"]').value;
-															    var cardQty = document.querySelector('.cart-qty');
-															    value = isNaN(value) ? 1 : value;
-															    value > 1 ? value-- : value;
-															    document.querySelector('input[name="qty"]').value = value;
-															    cardQty.innerHTML = value;
-															    cardQty.classList.add('rotate-x');
-															  }
-
-															  function removeAnimation(e) {
-															    e.target.classList.remove('rotate-x');
-															  }
-
-															  const counter = document.querySelector('.cart-qty');
-															  counter.addEventListener("animationend", removeAnimation);
-													  </script>
+		function incrementQty(el) {
+			var value = el.parentNode.previousElementSibling.value;
+		    var cardQty = document.querySelector('.cart-qty');
+		    value = isNaN(value) ? 1 : value;
+		    value++;
+		    el.parentNode.previousElementSibling.value = value;
+		    cardQty.innerHTML = value;
+		    cardQty.classList.add('rotate-x');
+		  }
+		function decrementQty(el) {
+		  	var value = el.parentNode.previousElementSibling.value;
+		    var cardQty = document.querySelector('.cart-qty');
+		    value = isNaN(value) ? 1 : value;
+		    value > 1 ? value-- : value;
+		    el.parentNode.previousElementSibling.value = value;
+		    cardQty.innerHTML = value;
+		    cardQty.classList.add('rotate-x');
+		  }
+		  function removeAnimation(e) {
+		    e.target.classList.remove('rotate-x');
+		  }
+		  const counter = document.querySelector('.cart-qty');
+		  counter.addEventListener("animationend", removeAnimation);
+  </script>
 </html>
