@@ -180,6 +180,9 @@
     text-align: right;
     color: #3b5f69;
     font-family: "palatino";
+     @include media(760){
+          text-align: center;
+    }
  }
  .sum-cart{
     padding: 1% 0 0 0;
@@ -189,6 +192,9 @@
     color: #3b5f69;
     font-weight: 600;
     font-size: 2em;
+    }
+     @include media(760){
+          text-align: center;
     }
  }
 /* button[type="button"] {*/

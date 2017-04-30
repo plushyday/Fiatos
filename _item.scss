@@ -88,3 +88,26 @@
 		}
 	}
 }
+
+.delivery-container{
+	.border-block{
+		    border: 1px solid #eee;
+    		margin-bottom: 20px;
+    		background-color: #fff;
+    		.border-block-content{
+    			padding: 0 5%;
+    			p,ul,ol{
+    				text-align: left;
+    			}
+    			.glyphicon{
+    				    font-size: 3em;
+   						color: $fircolor;
+    			}
+    		}
+	}
+	.steps{
+		background-color: #e8e8e8;
+	    padding: 10px;
+	    margin-top: 20px;
+	}
+}

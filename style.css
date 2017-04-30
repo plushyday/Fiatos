@@ -18,7 +18,11 @@
   font-style: normal; }
 body {
   background-color: #f5f6f5;
-  font-family: "Open Sans"; }
+  font-family: "Open Sans";
+  position: relative;
+  margin-bottom: 180px;
+  min-height: calc(100vh - 180px);
+  width: 100%; }
   body a:hover {
     text-decoration: none; }
 
@@ -98,7 +102,7 @@ path {
     display: block;
     position: absolute;
     width: 100%;
-    top: 75px;
+    top: 77px;
     z-index: 10; }
     .header-right #smart-menu-active span {
       width: 100%;
@@ -115,7 +119,15 @@ path {
         background: #1d5a77;
         border-top: 1px solid #1f253d; }
       .header-right #smart-menu-active span a {
-        color: #fff; }
+        color: #fff;
+        position: absolute;
+        top: 0;
+        text-indent: 6%;
+        right: 0;
+        bottom: 0;
+        left: 0; }
+      .header-right #smart-menu-active span:last-child {
+        border-bottom: none; }
     .header-right #smart-menu-active .cat {
       background: #183b4c; }
 
@@ -150,11 +162,12 @@ path {
 
 @media screen and (max-width: 760px) {
   .menu-basket-media {
-    margin-top: 0 !important; } }
+    margin-top: 0 !important;
+    margin-left: 5%; } }
 
 @media screen and (max-width: 760px) {
   #shop_basket {
-    width: 100px !important; }
+    width: 90px !important; }
     #shop_basket path {
       fill: #1d4356; } }
 #shop_basket .bask0 {
@@ -272,6 +285,9 @@ path {
 .pre-footer {
   padding: 60px 0;
   background-color: #6695a2; }
+  @media screen and (max-width: 760px) {
+    .pre-footer {
+      padding: 0; } }
   .pre-footer h2 {
     color: #fff; }
   .pre-footer section {
@@ -279,13 +295,20 @@ path {
     font-size: 1.5em;
     padding: 0 20%;
     color: #31708f; }
+    @media screen and (max-width: 760px) {
+      .pre-footer section {
+        padding: 0; } }
     .pre-footer section .text-style {
       margin: 20px 0 0 0;
       color: #fff;
       font-size: 1.3em; }
+      @media screen and (max-width: 760px) {
+        .pre-footer section .text-style {
+          font-size: 20px; } }
   @media screen and (max-width: 760px) {
     .pre-footer #about_us {
-      display: none; } }
+      background-color: #31708f;
+      padding-bottom: 7%; } }
 
 .contact-article {
   /* border-left: 2px solid $fircolor;*/
@@ -332,7 +355,11 @@ path {
 
 .footer-bottom {
   background: #3c3d41;
-  padding: 30px 0; }
+  padding: 30px 0;
+  position: absolute;
+  top: 100%;
+  height: 180px;
+  width: 100%; }
   .footer-bottom p {
     margin: 20px 0 0 0;
     color: #fff;
@@ -730,6 +757,22 @@ a.slide_btn {
       -moz-box-shadow: 0 0 0.6em #ccc;
       -ms-box-shadow: 0 0 0.6em #ccc; }
 
+.delivery-container .border-block {
+  border: 1px solid #eee;
+  margin-bottom: 20px;
+  background-color: #fff; }
+  .delivery-container .border-block .border-block-content {
+    padding: 0 5%; }
+    .delivery-container .border-block .border-block-content p, .delivery-container .border-block .border-block-content ul, .delivery-container .border-block .border-block-content ol {
+      text-align: left; }
+    .delivery-container .border-block .border-block-content .glyphicon {
+      font-size: 3em;
+      color: #31708f; }
+.delivery-container .steps {
+  background-color: #e8e8e8;
+  padding: 10px;
+  margin-top: 20px; }
+
 .list-group-item-cart {
   margin: 1%; }
   .list-group-item-cart:hover {
@@ -883,6 +926,9 @@ a.slide_btn {
   text-align: right;
   color: #3b5f69;
   font-family: "palatino"; }
+  @media screen and (max-width: 760px) {
+    .cart-title {
+      text-align: center; } }
 
 .sum-cart {
   padding: 1% 0 0 0;
@@ -892,6 +938,9 @@ a.slide_btn {
     color: #3b5f69;
     font-weight: 600;
     font-size: 2em; }
+  @media screen and (max-width: 760px) {
+    .sum-cart {
+      text-align: center; } }
 
 /* button[type="button"] {*/
 /*   cursor: pointer;*/
