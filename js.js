@@ -175,6 +175,38 @@ svgcolor.each(function(){
 //   $(this).children().removeClass('relative');
 // });
 // }
+
+//ADDING AFFIX (FIXED BOOTSTRAP CLASS)
+window.onscroll = function(){
+  var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+  var accordion = document.getElementById("accordion");
+  var footer = document.getElementsByTagName("footer")[0];
+  var parent = accordion.parentNode;
+  if((parent.getBoundingClientRect().top+scrolled)<=scrolled&&(document.documentElement.scrollHeight-(accordion.offsetHeight+scrolled))>=footer.offsetHeight){
+    accordion.style.position = 'fixed';
+    accordion.style.top = '0';
+    accordion.style.bottom = "initial";
+    accordion.style.width = parent.offsetWidth + "px";
+    accordion.style.paddingRight = '30px';
+    console.log("scrollHeight"+ document.documentElement.scrollHeight);
+    console.log("Accrodion height"+ (accordion.offsetHeight+scrolled));
+    console.log(footer.offsetHeight);
+  }
+  else if ((document.documentElement.scrollHeight-(accordion.offsetHeight+scrolled))<=footer.offsetHeight) {
+    console.log("HEY");
+    accordion.style.position = 'fixed';
+    accordion.style.top = 'initial';
+    accordion.style.width = parent.offsetWidth + "px";
+    accordion.style.paddingRight = '30px';
+    accordion.style.bottom = (window.innerHeight-footer.getBoundingClientRect().top - 3) + "px";
+  }
+  else{
+    accordion.style.position = 'relative';
+    accordion.style.width = 'initial';
+    accordion.style.bottom = "initial";
+    accordion.style.paddingRight = '0';
+  }
+}
 });
 
 

@@ -11,8 +11,8 @@
     }
     a[aria-expanded="false"]{
       .panel-heading-hover{
-        color: #040404;
-        background-color: #f5f6f5;
+        color: #245269;
+        background-color: #fff;
         &:hover{
           background-color: #3c3d41;
           color: #fff;
@@ -27,18 +27,22 @@
     border-bottom:0px;
   }
     a{
-      color: #040404;
+      color: #245269;
       text-decoration: none;
     }
   }
 }
 .list-group-item{
     border-radius: 0px !important;
+     -webkit-transition: -webkit-transform .5s ease;
+                transition: -webkit-transform .5s ease;
+                transition: transform .5s ease;
+                transition: transform .5s ease, -webkit-transform .5s ease;
   }
 .collapse{
   .list-group-item-new{
     &:before{
-      content: '\268A\00a0';
+      content: '\00a0';
     }
   }
 }
@@ -274,6 +278,4 @@
 }
 #accordion{
       padding: 0;
-    box-shadow: 0 0 0.6em #ccc;
-    -webkit-box-shadow: 0 0 0.6em #ccc;
 }

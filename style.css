@@ -25,6 +25,8 @@ body {
   width: 100%; }
   body a:hover {
     text-decoration: none; }
+  body a:active {
+    text-decoration: none; }
 
 .head {
   border-bottom: 2px solid #f2f2f2; }
@@ -49,8 +51,6 @@ path {
     fill: #57A773; }
   .logo svg {
     width: 200px; }
-  .logo a {
-    text-decoration: none; }
 
 .header-right {
   float: right; }
@@ -137,6 +137,13 @@ path {
   .cat a {
     color: #31708f !important;
     text-decoration: overline; }
+    .cat a:before {
+      opacity: 1 !important;
+      -webkit-transform: translateY(0px) !important;
+      -moz-transform: translateY(0px) !important;
+      transform: translateY(0px) !important;
+      border: none !important;
+      background-color: rgba(255, 255, 255, 0.3) !important; }
     @media screen and (max-width: 760px) {
       .cat a {
         color: #fff !important;
@@ -145,21 +152,59 @@ path {
 .menu-node {
   float: left;
   margin-top: 23px;
-  margin-right: 25px;
-  box-sizing: border-box;
-  font-family: 'Palatino';
-  cursor: pointer;
-  font-size: 23px;
-  color: #6D6D6D;
+  color: #000;
   -webkit-transition: all 0.15s ease-in-out;
   transition: all 0.15s ease-in-out; }
   .menu-node a {
     -webkit-transition: all 0.15s ease-in-out;
     transition: all 0.15s ease-in-out;
-    color: inherit; }
-  .menu-node:hover a {
-    color: #5ea5c8; }
+    font-family: "open Sans", sans-serif;
+    font-size: 20px;
+    height: 80px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 30px;
+    position: relative;
+    text-decoration-color: #df4914;
+    text-decoration-line: none;
+    width: 100px;
+    -webkit-tap-highlight-color: transparent;
+    color: #000; }
+    @media screen and (max-width: 760px) {
+      .menu-node a {
+        height: 0px;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+        width: 100%; } }
+    .menu-node a:hover {
+      color: #000; }
+      .menu-node a:hover:before {
+        opacity: 1;
+        -webkit-transform: translateY(0px);
+        -moz-transform: translateY(0px);
+        transform: translateY(0px); }
+    .menu-node a:before {
+      position: absolute;
+      top: 10%;
+      left: 0;
+      z-index: -1;
+      bottom: 5%;
+      width: 100%;
+      background-color: rgba(60, 61, 65, 0.09);
+      content: '';
+      opacity: 0;
+      -webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+      -moz-transition: height 0.3s, opacity 0.3s, -moz-transform 0.3s;
+      transition: height 0.3s, opacity 0.3s, transform 0.3s;
+      -webkit-transform: translateY(-10px);
+      -moz-transform: translateY(-10px);
+      transform: translateY(-10px); }
 
+.menu-basket-media a:before {
+  content: none !important; }
 @media screen and (max-width: 760px) {
   .menu-basket-media {
     margin-top: 0 !important;
@@ -201,7 +246,7 @@ path {
 
 #search {
   float: left;
-  margin-top: 10px; }
+  margin-left: 10px; }
   @media screen and (max-width: 760px) {
     #search {
       float: none;
@@ -377,8 +422,8 @@ path {
     background-color: #3c3d41;
     color: #fff; }
   .panel-group .panel a[aria-expanded="false"] .panel-heading-hover {
-    color: #040404;
-    background-color: #f5f6f5; }
+    color: #245269;
+    background-color: #fff; }
     .panel-group .panel a[aria-expanded="false"] .panel-heading-hover:hover {
       background-color: #3c3d41;
       color: #fff; }
@@ -387,14 +432,18 @@ path {
   .panel-group .panel:not(:last-child) {
     border-bottom: 0px; }
   .panel-group .panel a {
-    color: #040404;
+    color: #245269;
     text-decoration: none; }
 
 .list-group-item {
-  border-radius: 0px !important; }
+  border-radius: 0px !important;
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+  transition: transform .5s ease, -webkit-transform .5s ease; }
 
 .collapse .list-group-item-new:before {
-  content: '\268A\00a0'; }
+  content: '\00a0'; }
 
 .list-group {
   margin: 0px; }
@@ -581,9 +630,7 @@ path {
         transform: scaleX(1); }
 
 #accordion {
-  padding: 0;
-  box-shadow: 0 0 0.6em #ccc;
-  -webkit-box-shadow: 0 0 0.6em #ccc; }
+  padding: 0; }
 
 .slider-container {
   position: relative;
