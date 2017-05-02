@@ -102,6 +102,11 @@
     			.glyphicon{
     				    font-size: 3em;
    						color: $fircolor;
+   						margin-top: 20px;
+    			}
+    			h3{
+    				    background-color: #f5f6f5;
+    					padding: 10px;
     			}
     		}
 	}
@@ -109,5 +114,54 @@
 		background-color: #e8e8e8;
 	    padding: 10px;
 	    margin-top: 20px;
+	    box-shadow: 0 10px 2em #ccc;
 	}
 }
+
+.well {
+	margin-top: 4%;
+	border-radius: 0;
+	
+}
+
+.form-legend {
+	padding-bottom: 2em;
+}
+/* .form-group{*/
+/* 	margin: 0;*/
+/* }*/
+ .form-control{
+ 	border-radius:0px
+ }
+ .form-info{
+ 	z-index: 99;
+ 	position: relative;
+ 	&:before{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                z-index: -1;
+    			height: 1px;
+                background: #616161;  /* fallback for old browsers */
+				background: -webkit-linear-gradient(to right, #9bc5c3, #616161);  /* Chrome 10-25, Safari 5.1-6 */
+				background: -webkit-linear-gradient(left, #9bc5c3, #616161);
+				background: linear-gradient(to right, #9bc5c3, #616161); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+              }
+ }
+    .container-lit-form{
+					padding: 15px;
+
+              }
+/* .col-form-label{*/
+/* 	background-color: #194c65;*/
+/* 	color: #fff;*/
+/*     width: 100%;*/
+/*     padding: 2%;*/
+/*     margin:0;*/
+/*     font-size: 16px;*/
+/*     letter-spacing: 0.1em;*/
+/*     font-family: 'MyriadPro';*/
+/* }*/
+

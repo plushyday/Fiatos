@@ -62,7 +62,6 @@ path{
     text-align: center;
     svg{
       max-width: 400px;
-
     }
   }
   .st3{
@@ -180,14 +179,12 @@ path{
   transition: all 0.15s ease-in-out;
   a{
     color: $fircolor !important;
-    text-decoration: overline;
      &:before {
             opacity: 1 !important;
              -webkit-transform: translateY(0px) !important;
-            -moz-transform: translateY(0px) !important;
             transform: translateY(0px) !important;
             border: none !important;
-            background-color: rgba(255,255,255,0.3) !important;
+            background-color: rgba(255,255,255,0.6) !important;
         }
      @include media(760){
       color: #fff !important;
@@ -205,34 +202,31 @@ path{
   transition: all 0.15s ease-in-out;
   a{
     -webkit-transition:all 0.15s ease-in-out;
-  transition: all 0.15s ease-in-out;
- font-family:"open Sans", sans-serif;
-font-size:20px;
-height:80px;
-padding-bottom:30px;
-padding-left:20px;
-padding-right:20px;
-padding-top:30px;
-position:relative;
-text-decoration-color:rgb(223, 73, 20);
-text-decoration-line:none;
-width:100px;
--webkit-tap-highlight-color:rgba(0, 0, 0, 0);
-color: #000;
-    @include media(760){
-      height: 0px; 
-     padding-bottom: 0; 
-     padding-left: 0; 
-     padding-right: 0; 
-     padding-top: 0; 
-     width: 100%; 
-    }
+    transition: all 0.15s ease-in-out;
+    font-family:"open Sans", sans-serif;
+    font-size:20px;
+    height:80px;
+    padding-bottom:30px;
+    padding-left:20px;
+    padding-right:20px;
+    padding-top:30px;
+    position:relative;
+    width:100px;
+    -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+    color: #000;
+        @include media(760){
+          height: 0px; 
+          padding-bottom: 0; 
+          padding-left: 0; 
+          padding-right: 0; 
+          padding-top: 0; 
+          width: 100%; 
+        }
         &:hover{
           color: #000;
           &:before{
             opacity: 1;
             -webkit-transform: translateY(0px);
-            -moz-transform: translateY(0px);
             transform: translateY(0px);
           }
         }
@@ -247,18 +241,18 @@ color: #000;
             content: '';
             opacity: 0;
              -webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
-            -moz-transition: height 0.3s, opacity 0.3s, -moz-transform 0.3s;
-            transition: height 0.3s, opacity 0.3s, transform 0.3s;
+            transition:height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+            transition:height 0.3s, opacity 0.3s, transform 0.3s;
+            transition: height 0.3s, opacity 0.3s, transform 0.3s, -webkit-transform 0.3s;
             -webkit-transform: translateY(-10px);
-            -moz-transform: translateY(-10px);
             transform: translateY(-10px);
         }
   }
-  // &:hover{
-  //   a{
-  //   color: lighten($fircolor,20%);
-  //   }
-  // }
+  /* &:hover{*/
+  /*   a{*/
+  /*   color: lighten($fircolor,20%);*/
+  /*   }*/
+  /* }*/
 }
 .menu-basket-media{
   a{
@@ -394,7 +388,7 @@ color: #000;
             }
           &:hover{
             background-color:#2E6171;
-            box-shadow: 0px 0px 3px 0px rgb(59, 103, 95);
+            box-shadow: 0 0px 0.6em #b0b0b2;
               .categories-h4{
                 color: #fff;
               }

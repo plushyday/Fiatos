@@ -13,7 +13,7 @@
 	
 </head>
 <body>
-	<div class="container-fluid">
+	<div class="container-fluid head">
       	<div class="row">
 			<div class="col-lg-10 col-lg-offset-1 col-xs-12">
 				<div class="logo">
@@ -209,6 +209,7 @@
 <div class="container">
 	<h1 class="page-header text-center">Главные категории</h1>
 			<div class="row">
+				<div class="accordion-mobile-menu"></div>
 				<div class="col-md-4" style="position: relative">
 					<div class="panel-group" id="accordion" aria-multiselectable="true">
 					  <div class="panel panel-default"> 
@@ -500,6 +501,39 @@
 				<div class="clearfix"></div>
 			</div>
 		</footer>
-   
+   <script type="text/javascript">
+//ADDING AFFIX (FIXED BOOTSTRAP CLASS)
+window.onscroll = function(){
+  var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+  var accordion = document.getElementById("accordion");
+  var footer = document.getElementsByTagName("footer")[0];
+  var parent = accordion.parentNode;
+  if((parent.getBoundingClientRect().top+scrolled)<=scrolled&&(document.documentElement.scrollHeight-(accordion.offsetHeight+scrolled))>=footer.offsetHeight&&window.innerWidth>991){
+    accordion.style.position = 'fixed';
+    accordion.style.top = '0';
+    accordion.style.bottom = "initial";
+    accordion.style.width = parent.offsetWidth + "px";
+    accordion.style.paddingRight = '30px';
+    console.log("scrollHeight"+ document.documentElement.scrollHeight);
+    console.log("Accrodion height"+ (accordion.offsetHeight+scrolled));
+    console.log(footer.offsetHeight);
+  }
+  else if ((document.documentElement.scrollHeight-(accordion.offsetHeight+scrolled))<=footer.offsetHeight&&window.innerWidth>991) {
+    console.log("HEY");
+    accordion.style.position = 'fixed';
+    accordion.style.top = 'initial';
+    accordion.style.width = parent.offsetWidth + "px";
+    accordion.style.paddingRight = '30px';
+    accordion.style.bottom = (window.innerHeight-footer.getBoundingClientRect().top - 3) + "px";
+  }
+  else{
+    accordion.style.position = 'relative';
+    accordion.style.width = 'initial';
+    accordion.style.bottom = "initial";
+    accordion.style.paddingRight = '0';
+  }
+}
+//END OF ADDING AFFIX (FIXED BOOTSTRAP CLASS)
+   </script>
 </body>
 </html>
