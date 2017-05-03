@@ -129,9 +129,8 @@ path{
       .smart-menu{
       float: right;
       display: none;
+      }
     }
-              }
-   
     #smart-menu-active{
           margin-bottom: 25px;
           background: #2b696f;
@@ -157,13 +156,12 @@ path{
                   border-top: 1px solid #1f253d;
                 }
                 a{
-                  color: #fff;
-                  position: absolute;
-                  top: 0;
-                  text-indent: 6%;
-                  right: 0;
-                  bottom: 0;
-                  left: 0;
+                      color: #fff;
+                      position: absolute;
+                      width: 100%;
+                      height: 100%;
+                      text-indent: 6%;
+                      left: 0;
                 }
             &:last-child{
               border-bottom: none;
@@ -172,7 +170,7 @@ path{
         .cat{
             background: #183b4c;
         }
-    }
+     }
   }
 .cat {
   -webkit-transition:all 0.15s ease-in-out;
@@ -318,6 +316,7 @@ path{
     @include media(760){
       float: none;
       width: 100%;
+      margin-left:0;
       display: block;
 
       input{
@@ -342,7 +341,7 @@ path{
     border: none;
     font-size: 1.5em;
     padding: 6px 0px;
-    margin-top: 10px;
+    margin-top: 18px;
     margin-right: 20px;
     -webkit-transition:all 200ms ease;
     transition: all 200ms ease;
@@ -434,7 +433,7 @@ path{
             .text-style{
         margin: 20px 0 0 0;
         color: #fff;
-        font-size: 1.3em;
+        font-size: 1em;
               @include media(760){
           font-size: 20px;
         }
@@ -462,7 +461,7 @@ path{
       margin: 0;
       white-space: pre-wrap;
       color: #eaeaea;
-      font-size: 1.3em;
+      font-size: 1.2em;
       margin: 0;
               a[href*="mailto:"]{
                 color: $fircolor;

@@ -88,7 +88,7 @@
 				</div>
 					<div class="smart-menu">
 						<span class="menu-node"><a href="catalog.html">Каталог</a></span>
-						<span class="menu-node cat"><a href="payment_delivery.html">Доставка и оплата</a></span>
+						<span class="menu-node"><a href="payment_delivery.html">Доставка и оплата</a></span>
 						<span class="menu-node"><a href="index.html#about_us">О нас</a></span>
 					</div>
 					<span class="menu-node menu-basket-media">
@@ -167,36 +167,70 @@
 					<div class="container-lit-form">
 						<div class="form-group">
 							<label for="name">Ваше имя</label>
-							<input type="email" id="name" name="name" class="form-control">
+							<input type="text" id="name" name="name" class="form-control">
 						</div>
 						<div class="form-group">
 							<label for="surname">Ваша фамилия</label>
-							<input type="email" id="name" name="surname" class="form-control">
+							<input type="text" id="name" name="surname" class="form-control">
 						</div>
 					</div>
-					
+					<h3 class="form-info">Доставка</h3>
+					<div class="container-lit-form">
 						<div class="form-group">
-							<label for="city">Ваш город</label>
-							<input type="email" id="city" name="city" class="form-control">
+							<label for="city">Ваш город</label><span class="additional-info">Обратите внимание, что за пределы Минска доставка может осуществляться только через почту.</span>
+							<input type="text" id="city" name="city" class="form-control">
 						</div>
 						<div class="form-group">
 						  <span class="glyphicon glyphicon-map-marker glyphicon-align-left" aria-hidden="true"></span>
 							<label for="adress">Адрес</label>
 							<input type="email" id="adress" name="adress" class="form-control">
 						</div>
+						<div id="zip" class="form-group">
+							<label for="zip-code">Индекс</label>
+							<input type="text" id="zip-code" name="zipCode" class="form-control" placeholder="Введите индекс">
+						</div>
+						<label for="dropdown">Способ доставки</label>
+						<select class="select-style" id="dropdown">
+							  <option value="courier">Курьером по Минску</option>
+							  <option value="selfdelivery">Самовывоз</option>
+							  <option value="post">Доставка почтой РБ</option>
+							</select>
+							<script type="text/javascript">
+									$(function () {
+										  $("#dropdown").change(function() {
+										    var val = $(this).val();
+										    if(val === "post") {
+										        $("#zip").css({
+   													 "height": "59px",
+  													 "visibility": "visible",
+  													 "margin-bottom": "15px"
+										        });
+										    }
+										    else{
+										        $("#zip").css({
+   													 "height": "0",
+  													 "visibility": "hidden",
+  													 "margin-bottom": "0px"
+										        });
+										    }
+										  });
+										});
+							</script>
+						</div>
+							<h3 class="form-info">Контактные данные</h3>
+					<div class="container-lit-form">
 						<div class="form-group">
-							<label for="zip-code">Zip Code</label>
-							<input type="text" id="zip-code" name="zipCode" class="form-control" placeholder="Optional">
+							<label for="name">Ваш номер телефона</label>
+							<input type="text" id="name" name="name" class="form-control">
 						</div>
 						<div class="form-group">
 							<label for="email">Ваш Email</label>
-							<input type="email" id="email" name="email" class="form-control">
+							<input type="email" id="email" name="email" placeholder="Опционально" class="form-control">
 						</div>
-						<div class="form-group">
-							<label for="email-confirm">Подтвердите Email</label>
-							<input type="email" id="email-confirm" name="emailConfirm" class="form-control">
-						</div>
-						<input type="submit" value="Оформить" class="btn btn-primary">
+					</div>
+					<div class="row">
+								<div class="col-md-3"><button type="button" class="btn btn-cart btn-success"><a href="form.html">Оформить</a></button></div>
+					</div>
 					</form>
 				</div>
 			</div>
