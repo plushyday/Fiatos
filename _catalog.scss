@@ -239,6 +239,8 @@
 
       }
     }
+
+
     .ajax-filter-count{
   text-align: center;
   font-weight: normal;  
@@ -278,4 +280,43 @@
 }
 #accordion{
       padding: 0;
+}
+ .custom_checkbox2{
+  float: left;
+  @include media(760){
+   float: none;
+  }
+   input[type="checkbox"]{
+            display:none;
+      & + label{
+        font-weight: 500;
+      }
+    & + label:before{
+            background: #ffffff;
+            height: 21px;
+            border: 1px solid #ccc;
+            content: " ";
+            display: inline-block;
+            width: 21px;
+            vertical-align: middle;
+            margin-right: 10px;
+            position: relative;
+            top: -1px;
+        }
+  &:checked + label:before{
+            content: "\2713";
+            color: #ada5a5;
+            text-align: center;
+            line-height: 17px;
+         }
+  }
+}
+.ajax-count{
+  float:right;
+   @include media(760){
+   float: none;
+  }
+  h5{
+    margin-top: 5px;
+  }
 }

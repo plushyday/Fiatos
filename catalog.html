@@ -211,7 +211,18 @@
 			<div class="row">
 				<div class="accordion-mobile-menu"></div>
 				<div class="col-md-4" style="position: relative">
+						
 					<div class="panel-group" id="accordion" aria-multiselectable="true">
+					<form class="ajax-form">
+						<!-- <div class="panel panel-default" role="tab">
+							<h4 class="panel-title price-header">Искать в ценовом диапазоне</h4>
+							<div class="input-group price-holder input-group-lg">
+								<input type="text" class="form-control" placeholder="От" aria-describedby="sizing-addon1">
+							</div>
+							<div class="input-group price-holder input-group-lg">
+								<input type="text" class="form-control" placeholder="До" aria-describedby="sizing-addon1">
+							</div>
+						</div> -->
 					  <div class="panel panel-default"> 
 					   <a href="#inhaler-list" class="" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="inhaler-list">
 							  <div class="panel-heading panel-heading-hover" role="tab" id="inhaler-list-heading"> 
@@ -338,8 +349,9 @@
 								  </ul> 
 						  </div> 
 					  </div>
-							
+						</form>	
 						</div>
+
 				</div>
 
 						   <div class="col-md-8">
@@ -350,7 +362,7 @@
 									<div class="category-filters">
 									<a name="category"></a>
 										<div class="panel panel-default">
-											<div class="panel-heading" role="tab">
+											<form class="panel-heading" role="tab">
 											<h4 class="panel-title price-header">Искать в ценовом диапазоне</h4>
 												<div class="input-group price-holder input-group-lg">
 												  <input type="text" class="form-control" placeholder="От" aria-describedby="sizing-addon1">
@@ -358,10 +370,18 @@
 												<div class="input-group price-holder input-group-lg">
 												  <input type="text" class="form-control" placeholder="До" aria-describedby="sizing-addon1">
 												</div>
+
+													<div class="custom_checkbox2">
+												       <input type="checkbox" name="custom_checkbox2" id="custom_checkbox2" value="custom_checkbox2">
+												       <label for="custom_checkbox2">Показывать только в наличии</label>
+												     </div>
+
 												<div class="ajax-count">
 													<h5>Всего найдено товаров: <span class="badge">14</span></h5>
-												</div>
+												
 											</div>
+											<div class="clearfix"></div>
+											</form>
 										</div>
 									</div>
 									</div>

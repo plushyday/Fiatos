@@ -632,6 +632,40 @@ path {
 #accordion {
   padding: 0; }
 
+.custom_checkbox2 {
+  float: left; }
+  @media screen and (max-width: 760px) {
+    .custom_checkbox2 {
+      float: none; } }
+  .custom_checkbox2 input[type="checkbox"] {
+    display: none; }
+    .custom_checkbox2 input[type="checkbox"] + label {
+      font-weight: 500; }
+    .custom_checkbox2 input[type="checkbox"] + label:before {
+      background: #ffffff;
+      height: 21px;
+      border: 1px solid #ccc;
+      content: " ";
+      display: inline-block;
+      width: 21px;
+      vertical-align: middle;
+      margin-right: 10px;
+      position: relative;
+      top: -1px; }
+    .custom_checkbox2 input[type="checkbox"]:checked + label:before {
+      content: "\2713";
+      color: #ada5a5;
+      text-align: center;
+      line-height: 17px; }
+
+.ajax-count {
+  float: right; }
+  @media screen and (max-width: 760px) {
+    .ajax-count {
+      float: none; } }
+  .ajax-count h5 {
+    margin-top: 5px; }
+
 .slider-container {
   position: relative;
   height: 360px;
