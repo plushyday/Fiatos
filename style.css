@@ -556,7 +556,6 @@ path {
         word-wrap: normal; }
       .catalog-content .content-list li .list-right .sale {
         text-align: center;
-        padding: 5% 0;
         font-size: 1.5em;
         color: #a94442; }
     .catalog-content .content-list li .list-bottom {
@@ -577,6 +576,7 @@ path {
         border-color: #34a8c8;
         color: #34a8c8;
         border: 3px solid;
+        width: 100%;
         padding: 13px 0;
         text-align: center;
         -webkit-transition: all 200ms ease-in-out;
@@ -663,12 +663,12 @@ path {
       text-align: center;
       line-height: 17px; }
 
-.ajax-count {
+.ajax-count-wrapper {
   float: right; }
   @media screen and (max-width: 760px) {
-    .ajax-count {
+    .ajax-count-wrapper {
       float: none; } }
-  .ajax-count h5 {
+  .ajax-count-wrapper h5 {
     margin-top: 5px; }
 
 .slider-container {
@@ -783,6 +783,7 @@ a.slide_btn {
     display: block;
     cursor: pointer;
     margin-top: 13px;
+    width: 100%;
     background-color: rgba(255, 255, 255, 0);
     border-color: #34a8c8;
     color: #34a8c8;
