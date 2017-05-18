@@ -158,7 +158,6 @@ function randomInteger(min, max) {
 
 var svgcolor = $(".svg-background");
 
-console.dir(svgcolor);
 svgcolor.each(function(){
 	var rand=randomInteger(0, obj.length-1);
 	var randcolor = obj[rand];
@@ -176,6 +175,28 @@ svgcolor.each(function(){
 // });
 // }
 
+//SLIDE TO ANCHOR
+$(function(){
+    $('a[href*=\\#]').click(function() {
+            var $target = $(this.hash);
+            $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
+            // if ($target.length) {
+              var targetOffset = $target.offset().top;
+              console.log(location.pathname && $(this)[0].pathname);
+              if(location.pathname != $(this)[0].pathname){
+                $('html,body').stop().animate({scrollTop:0}, 0, function() { 
+                   $('html,body').animate({scrollTop: targetOffset}, 500);
+                   return false;
+                });
+                return false;
+              }
+              else{
+                $('html,body').animate({scrollTop: targetOffset}, 500);//скорость прокрутки
+                return false;
+              }
+    });
+});
+//SLIDE TO ANCHOR END
 
 });
 
