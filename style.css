@@ -421,19 +421,22 @@ path {
   .panel-group .panel .panel-heading-hover {
     background-color: #3c3d41;
     color: #fff; }
-  .panel-group .panel a[aria-expanded="false"] .panel-heading-hover {
+  .panel-group .panel label:not(.sub-label) {
+    display: block;
+    max-width: none;
+    margin-bottom: 0px;
     color: #245269;
-    background-color: #fff; }
-    .panel-group .panel a[aria-expanded="false"] .panel-heading-hover:hover {
-      background-color: #3c3d41;
-      color: #fff; }
+    text-decoration: none; }
+    .panel-group .panel label:not(.sub-label)[aria-expanded="false"] .panel-heading-hover {
+      color: #245269;
+      background-color: #fff; }
+      .panel-group .panel label:not(.sub-label)[aria-expanded="false"] .panel-heading-hover:hover {
+        background-color: #3c3d41;
+        color: #fff; }
   .panel-group .panel + .panel {
     margin-top: 0px !important; }
   .panel-group .panel:not(:last-child) {
     border-bottom: 0px; }
-  .panel-group .panel a {
-    color: #245269;
-    text-decoration: none; }
 
 .list-group-item {
   border-radius: 0px !important;
@@ -441,6 +444,9 @@ path {
   transition: -webkit-transform .5s ease;
   transition: transform .5s ease;
   transition: transform .5s ease, -webkit-transform .5s ease; }
+  .list-group-item .sub-label {
+    display: inline;
+    font-weight: 500; }
 
 .collapse .list-group-item-new:before {
   content: '\00a0'; }
@@ -572,6 +578,7 @@ path {
         border-color: #34a8c8;
         color: #34a8c8;
         border: 3px solid;
+        width: 100%;
         padding: 13px 0;
         text-align: center;
         -webkit-transition: all 200ms ease-in-out;
@@ -658,12 +665,12 @@ path {
       text-align: center;
       line-height: 17px; }
 
-.ajax-count {
+.ajax-count-wrapper {
   float: right; }
   @media screen and (max-width: 760px) {
-    .ajax-count {
+    .ajax-count-wrapper {
       float: none; } }
-  .ajax-count h5 {
+  .ajax-count-wrapper h5 {
     margin-top: 5px; }
 
 .slider-container {
