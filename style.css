@@ -335,11 +335,11 @@ path {
 .pre-footer {
   padding: 60px 0;
   background-color: #6695a2; }
+  .pre-footer h1 {
+    color: #fff; }
   @media screen and (max-width: 760px) {
     .pre-footer {
       padding: 0; } }
-  .pre-footer h1 {
-    color: #fff; }
   .pre-footer section {
     font-weight: 200;
     font-size: 1.5em;

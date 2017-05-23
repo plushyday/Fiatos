@@ -423,12 +423,13 @@ path{
  .pre-footer{
   padding: 60px 0;
   background-color:#6695a2;
+  h1{
+      color: #fff;
+    }
       @include media(760){
                 padding: 0;
               }
-    h1{
-      color: #fff;
-    }
+    
     section{
       font-weight: 200;
       font-size: 1.5em;
