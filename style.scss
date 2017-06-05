@@ -35,7 +35,7 @@ $path: "./font/fonts" !default;
 }
 body{
   background-color:#f5f6f5;
-  font-family: "Open Sans";
+  font-family: "MyriadPro";
       position: relative;
       margin-bottom: 180px;
     min-height: calc(100vh - 180px);
@@ -210,6 +210,7 @@ path{
     font-family:"open Sans", sans-serif;
     font-size:20px;
     height:80px;
+    font-weight: 600;
     cursor: pointer;
     padding-bottom:30px;
     padding-left:20px;
@@ -284,18 +285,34 @@ path{
   }
 }
 #shop_basket{
-  padding-top: 1px;
+    .amount-bask{
+          fill:lighten($fircolor, 30%); 
+  }
+  .text-bask{
+  fill: #fff;
+  font-family:'MyriadPro';
+  font-size:24px;
+   }
    &.cat-basket{
     .bask0{
     fill:lighten($fircolor, 30%);
           stroke-width: 2px;
           stroke: #3b498a;
     }
+
   }
   &:hover{
   .bask0{
     fill:lighten($fircolor, 30%);
     }
+    .amount-bask{
+    stroke: $fircolor;
+    fill: #ffffff;
+    stroke-dasharray: 1;
+    }
+    .text-bask{
+        fill: #000;
+      }
   }
 }
 #shop_basket, #magnifier{
@@ -361,7 +378,7 @@ path{
       .categories-layout {
         background: #fbfbfb;
           margin: 5px;
-          padding: 20px 0;
+          padding: 30px 0;
           transition: 0.5s all;
           -webkit-transition: 0.5s all;
           -moz-transition: 0.5s all;
@@ -512,7 +529,6 @@ path{
     padding: 30px 0;
     position: absolute;
     top: 100%;
-    height: 180px;
     width: 100%;
     p {
     margin: 20px 0 0 0;
@@ -526,7 +542,23 @@ path{
     }
   }
 }
-
+.footer-social-info{
+    color: #85929e;
+    font-size: 0.8em;
+    text-align: left;
+    border-top: #526c84 1px dashed;
+    padding-top: 30px;
+    margin-top: 20px;
+    ul{
+      list-style-type: none;
+      &:first-child{
+        float: left;
+      }
+      &:last-child{
+        float: right;
+      }
+    }
+  }
 
 @import "_catalog.scss";
 @import "_slider.scss";

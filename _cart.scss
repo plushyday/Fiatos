@@ -3,7 +3,7 @@
     &:hover{
           box-shadow: 0 0 0.6em #ccc;
           background-color: #f6f6f7;
-          cursor: pointer;
+          cursor: normal;
     }
  }
 .checkbox-custom {
@@ -145,9 +145,10 @@
 
 
  .last-cart{
+      text-align: center;
       padding: 13px 0 0 0;
       @include media(991){
-             text-align: center;
+             
              padding: 13px 0 0 0;
         }
           h5{
@@ -197,6 +198,8 @@
           text-align: center;
     }
  }
+
+
 /* button[type="button"] {*/
 /*   cursor: pointer;*/
 /*   width: 168px;*/

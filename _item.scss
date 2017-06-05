@@ -6,18 +6,17 @@
 			overflow: hidden;
 			margin-bottom: 2%;
 				.basket{
-	                display: block;
-	                cursor: pointer;
-	                margin-top: 13px;
-	                width: 100%;
-	                background-color: rgba(255,255,255,0);
-	                border-color: rgb(52,168,200);
-	                color: rgb(52,168,200);
-	                border: 3px solid;
-	                padding: 13px 0;
-	                text-align: center;
-	                -webkit-transition: all 200ms ease-in-out;
-	                transition: all 200ms ease-in-out;
+	               display: block;
+				    cursor: pointer;
+				    margin-top: 13px;
+				    background-color: rgba(255, 255, 255, 0);
+				    border-color: #34a8c8;
+				    color: #34a8c8;
+				    border: 3px solid;
+				    padding: 13px 25px;
+				    text-align: center;
+				    -webkit-transition: all 200ms ease-in-out;
+				    transition: all 200ms ease-in-out;
 	                &:hover{
 	                      background-color: #46656d;
 	                      border-color: #46656d;
@@ -25,6 +24,9 @@
 
 	                }
 	            }
+	             .variable-param{
+	             	float: right;
+	             }
 			.availability{
 				float: right;
 				font-size: 1.2em;
