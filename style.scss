@@ -53,6 +53,9 @@ body{
       }
   }
 }
+select{
+    background-color: #fcfcfd;
+}
 .head{
       border-bottom: 2px solid #f2f2f2;
 }
@@ -376,7 +379,7 @@ path{
     border: 1px solid #e7eaed;
     margin: 20px 0;
       .categories-layout {
-        background: #fbfbfb;
+        background: #f5f6f5;
           margin: 5px;
           padding: 30px 0;
           transition: 0.5s all;

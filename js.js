@@ -32,6 +32,8 @@ $('.slider').each(function(){
   var $slides = $this.find('.slide');
   var bulletArray = [];
   var currentIndex = 0;
+  $slides.eq(0).css({
+      display: 'block'});
   var timeout;
   
   function move(newIndex) {
@@ -82,7 +84,7 @@ $('.slider').each(function(){
     } else {
       move(0);
     }
-  }, 5000);
+  }, 10000);
  }
 
  $('.next_btn').on('click', function() {
@@ -177,25 +179,23 @@ svgcolor.each(function(){
 
 //SLIDE TO ANCHOR
 $(function(){
-    $('a[href*=\\#]').click(function() {
-            var $target = $(this.hash);
-            $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
-            // if ($target.length) {
-              var targetOffset = $target.offset().top;
-              console.log(location.pathname && $(this)[0].pathname);
-              if(location.pathname != $(this)[0].pathname){
-                $('html,body').stop().animate({scrollTop:0}, 0, function() { 
-                   $('html,body').animate({scrollTop: targetOffset}, 500);
-                   return false;
-                });
-                return false;
-              }
-              else{
-                $('html,body').animate({scrollTop: targetOffset}, 500);//скорость прокрутки
-                return false;
-              }
-    });
+  var substr = location.search.substring(1); 
+  substr = substr.split("=")[1];
+    if(substr==="about_us"){
+    $('html,body').animate({scrollTop:$('#about_us').offset().top},600);
+    }
 });
+//     $('a[href*=\\#]').click(function() {
+//             var $target = $(this.hash);
+//             $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
+//             // if ($target.length) {
+//               var targetOffset = $target.offset().top;
+         
+//                 $('html,body').animate({scrollTop: targetOffset}, 500);//скорость прокрутки
+              
+//     });
+// });
+
 //SLIDE TO ANCHOR END
 
 });
