@@ -37,6 +37,7 @@ body{
   background-color:#f5f6f5;
   font-family: "MyriadPro";
       position: relative;
+      font-size: 14px;
       margin-bottom: 180px;
     min-height: calc(100vh - 180px);
     width: 100%;
@@ -54,7 +55,8 @@ body{
   }
 }
 .head{
-      border-bottom: 2px solid #f2f2f2;
+    z-index: -5;
+    background-color: #3c3d41;
 }
 path{
  shape-rendering: geometricPrecision;
@@ -70,13 +72,16 @@ path{
       max-width: 400px;
     }
   }
-  .st3{
+  .st3, .st0{
     -webkit-transition:all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
   }
   &:hover{
     .st3{
       fill:#57A773;
+    }
+    .st0{
+      fill:#5ea5c8;
     }
   }
   svg{
@@ -173,22 +178,20 @@ path{
               border-bottom: none;
             }
         }
-        .cat{
-            background: #183b4c;
-        }
+       
      }
   }
 .cat {
   -webkit-transition:all 0.15s ease-in-out;
   transition: all 0.15s ease-in-out;
   a{
-    color: $fircolor !important;
+    color: #f8fcfe !important;
      &:before {
             opacity: 1 !important;
              -webkit-transform: translateY(0px) !important;
             transform: translateY(0px) !important;
             border: none !important;
-            background-color: rgba(255,255,255,0.6) !important;
+           background-color: rgba(79, 85, 112, 0.81);
         }
      @include media(760){
       color: #fff !important;
@@ -207,10 +210,9 @@ path{
   a{
     -webkit-transition:all 0.15s ease-in-out;
     transition: all 0.15s ease-in-out;
-    font-family:"open Sans", sans-serif;
+    // font-family:"open Sans", sans-serif;
     font-size:20px;
     height:80px;
-    font-weight: 600;
     cursor: pointer;
     padding-bottom:30px;
     padding-left:20px;
@@ -219,7 +221,8 @@ path{
     position:relative;
     width:100px;
     -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
-    color: #000;
+    z-index: 10;
+    color: #b3bdc6;
         @include media(760){
           height: 0px; 
           padding-bottom: 0; 
@@ -229,7 +232,7 @@ path{
           width: 100%; 
         }
         &:hover{
-          color: #000;
+          color: #d5dcdf;
           &:before{
             opacity: 1;
             -webkit-transform: translateY(0px);
@@ -243,15 +246,19 @@ path{
             z-index: -1;
             bottom: 5%;
             width: 100%;
-            background-color: rgba(60, 61, 65, 0.09);
+            background-color: rgba(79, 85, 112, 0.81);
             content: '';
             opacity: 0;
              -webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
             transition:height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
             transition:height 0.3s, opacity 0.3s, transform 0.3s;
-            transition: height 0.3s, opacity 0.3s, transform 0.3s, -webkit-transform 0.3s;
+            transition: height 0.3/s, opacity 0.3s, transform 0.3s, -webkit-transform 0.3s;
             -webkit-transform: translateY(-10px);
             transform: translateY(-10px);
+            @include media(760){
+              top: 0;
+              bottom: 0;
+            }
         }
   }
   /* &:hover{*/
@@ -272,16 +279,19 @@ path{
     }
 }
 #shop_basket{
+  path{
+        fill: #b3bdc6;
+      }
   @include media(760){
       width: 90px !important;
       path{
-        fill: darken($fircolor,15%);
+        fill: #68a9c9;
       }
     }
   .bask0{
     -webkit-transition:all 0.15s ease-in-out;
     transition: all 0.15s ease-in-out;
-    fill:#f5f6f5;
+    fill:#3c3d41;
   }
 }
 #shop_basket{
@@ -295,7 +305,7 @@ path{
    }
    &.cat-basket{
     .bask0{
-    fill:lighten($fircolor, 30%);
+    fill:#246484;
           stroke-width: 2px;
           stroke: #3b498a;
     }
@@ -303,7 +313,7 @@ path{
   }
   &:hover{
   .bask0{
-    fill:lighten($fircolor, 30%);
+    fill:$fircolor;
     }
     .amount-bask{
     stroke: $fircolor;
@@ -321,6 +331,7 @@ path{
 #magnifier{
   outline: none;
   margin-left:-15px;
+  display: none;
     @include media(760){
       display: none;
     }
@@ -337,12 +348,13 @@ path{
 #search{
   float: left;
   margin-left: 10px;
+  display: none;
     @include media(760){
       float: none;
       width: 100%;
       margin-left:0;
       display: block;
-
+      display: none;
       input{
            width: 100% !important;
           outline: none;

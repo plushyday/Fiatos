@@ -30,6 +30,9 @@ $('.slider').each(function(){
   var $this = $(this);
   var $group = $this.find('.slide_group');
   var $slides = $this.find('.slide');
+  $slides.eq(0).css({
+    display: 'block'
+  })
   var bulletArray = [];
   var currentIndex = 0;
   var timeout;
@@ -97,7 +100,7 @@ $('.slider').each(function(){
   if (currentIndex !== 0) {
     move(currentIndex - 1);
   } else {
-    move(3);
+    move($slides.length - 1);
   }
 });
 
@@ -176,27 +179,170 @@ svgcolor.each(function(){
 // }
 
 //SLIDE TO ANCHOR
-$(function(){
-    $('a[href*=\\#]').click(function() {
-            var $target = $(this.hash);
-            $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
-            // if ($target.length) {
-              var targetOffset = $target.offset().top;
-              console.log(location.pathname && $(this)[0].pathname);
-              if(location.pathname != $(this)[0].pathname){
-                $('html,body').stop().animate({scrollTop:0}, 0, function() { 
-                   $('html,body').animate({scrollTop: targetOffset}, 500);
-                   return false;
-                });
-                return false;
-              }
-              else{
-                $('html,body').animate({scrollTop: targetOffset}, 500);//скорость прокрутки
-                return false;
-              }
-    });
-});
+
+
+function anchor(){
+    var Params = location.search.substring(1); 
+    if(Params.split("=")[1]=="about_us"){
+    $('html,body').animate({scrollTop:$('#about_us').offset().top},600);
+    }
+}
+setTimeout(anchor,100);
+
 //SLIDE TO ANCHOR END
+
+// PURE JAVASCRIPT "Scroller" CLASS (OOP)
+
+function Scroller(options) {
+  this.options = options;
+  this.button = null;
+  this.stop = false;
+}
+
+Scroller.prototype.constructor = Scroller;
+
+Scroller.prototype.createButton = function() {
+  this.span = document.createElement("span");
+  this.span.classList.add("glyphicon");
+  this.span.classList.add("glyphicon-triangle-top");
+  this.span.style.fontSize = 'large';
+  this.button = document.createElement('button');
+  this.button.classList.add('scroll-button');
+  this.button.classList.add('scroll-button--hidden');
+  document.body.appendChild(this.button);
+  document.getElementsByClassName("scroll-button")[0].appendChild(this.span);
+}
+  
+Scroller.prototype.init = function() {
+  this.createButton();
+  this.checkPosition();
+  this.click();
+  this.stopListener();
+}
+
+Scroller.prototype.scroll = function() {
+  if (this.options.animate == false || this.options.animate == "false") {
+    this.scrollNoAnimate();
+    return;
+  }
+  if (this.options.animate == "normal") {
+    this.scrollAnimate();
+    return;
+  }
+  if (this.options.animate == "linear") {
+    this.scrollAnimateLinear();
+    return;
+  }
+}
+Scroller.prototype.scrollNoAnimate = function() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+Scroller.prototype.scrollAnimate = function() {
+  if (this.scrollTop() > 0 && this.stop == false) {
+    setTimeout(function() {
+      this.scrollAnimate();
+      window.scrollBy(0, (-(Math.abs((this.scrollTop()-document.getElementsByClassName("page-header")[0].offsetTop)/this.options.normal['steps']))));
+    }.bind(this), (this.options.normal['ms']));
+  }
+}
+Scroller.prototype.scrollAnimateLinear = function() {
+  if (this.scrollTop() > 0 && this.stop == false) {
+    setTimeout(function() {
+      this.scrollAnimateLinear();
+      window.scrollBy(0, -(Math.abs(this.options.linear['px'])-document.getElementsByClassName("page-header")[0].offsetTop));
+
+    }.bind(this), this.options.linear['ms']);
+  }
+}
+
+Scroller.prototype.click = function() {
+  
+  this.button.addEventListener("click", function(e) {
+    e.stopPropagation();
+      this.scroll();
+  }.bind(this), false);
+  
+  this.button.addEventListener("dblclick", function(e) {
+    e.stopPropagation();
+      this.scrollNoAnimate();
+  }.bind(this), false);
+  
+}
+
+Scroller.prototype.hide = function() {
+  this.button.classList.add("scroll-button--hidden");
+}
+
+Scroller.prototype.show = function() {
+  this.button.classList.remove("scroll-button--hidden");
+}
+
+Scroller.prototype.checkPosition = function() {
+  window.addEventListener("scroll", function(e) {
+    if (this.scrollTop() > (this.options.showButtonAfter+document.getElementsByClassName("page-header")[0].offsetTop)) {
+      this.show();
+    } else {
+      this.hide();
+    }
+  }.bind(this), false);
+}
+
+Scroller.prototype.stopListener = function() {
+  
+  // stop animation on slider drag
+  var position = this.scrollTop();
+  window.addEventListener("scroll", function(e) {
+    if (this.scrollTop() > position) {
+      this.stopTimeout(200);
+    } else {
+      //...
+    }
+    position = this.scrollTop();
+  }.bind(this, position), false);
+
+  // stop animation on wheel scroll down
+  window.addEventListener("wheel", function(e) {
+    if(e.deltaY > 0) this.stopTimeout(200);
+  }.bind(this), false);
+}
+
+Scroller.prototype.stopTimeout = function(ms){
+   this.stop = true;
+   setTimeout(function() {
+     this.stop = false;
+   }.bind(this), ms);
+}
+
+Scroller.prototype.scrollTop = function(){
+   var curentScrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+   // var curentScrollTop = document.getElementsByClassName("page-header")[0].scrollIntoView();
+  return curentScrollTop;
+}
+
+
+
+// ------------------- USE EXAMPLE ---------------------
+// *Set options
+var options = {
+  'showButtonAfter': 200, // show button after scroling down this amount of px
+  'animate': "normal", // [false|normal|linear] - for false no aditional settings are needed
+  // easy out effect
+  'normal': { // applys only if [animate: normal] - set scroll loop "distanceLeft"/"steps"|"ms"
+    'steps': 15, // more "steps" per loop => slower animation
+    'ms': 1000/60 // less "ms" => quicker animation, more "ms" => snapy
+  },
+  // linear effect
+  'linear': { // applys only if [animate: linear] - set scroll "px"|"ms"
+    'px': 80, // more "px" => quicker your animation gets
+    'ms': 1000/60 // Less "ms" => quicker your animation gets, More "ms" =>
+  }, 
+};
+// *Create new Scroller and run it.
+var scroll = new Scroller(options);
+scroll.init();
+// END PURE JAVASCRIPT "Scroller" CLASS (OOP)
+
 
 });
 

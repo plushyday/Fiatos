@@ -1,13 +1,18 @@
 .slider-container{
   position: relative;
-  height: 360px;
+  // height: 400px;
+  height: calc(100vh / 1.5);
   margin: 0;
   padding: 0;
   width: 100%;
+  @media only screen and (max-width: 767px) {
+    display: none;
+  }
     .slider {
       margin: 0 auto;
         .slide_viewer {
-          height: 360px;
+          // height: 400px;
+          height: calc(100vh / 1.5);
           overflow: hidden;
           position: relative;
               .slide_group {
@@ -20,10 +25,7 @@
                   position: absolute;
                   width: 100%;
                   text-align: center;
-                  img{
-                    max-height: 260px;
-                  }
-                  h1 {
+                    h1 {
                        &.text_slider_style {
                             max-height: 100px;
                             margin-left: 100px;
@@ -53,7 +55,7 @@
 
 .slide_buttons {
   left: 0;
-  top: 300px;
+  top: calc(100vh / 1.5 - 60px);
   z-index: 100;
   position: absolute;
   right: 0;
@@ -80,9 +82,8 @@ a.slide_btn {
 }
 
 .directional_nav {
-  height: 340px;
+  height: calc(100vh / 1.5 - 60px);
   margin: 0 auto;
-  position: relative;
   top: -340px;
 }
 

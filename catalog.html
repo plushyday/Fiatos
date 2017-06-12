@@ -537,12 +537,8 @@ window.onscroll = function(){
     accordion.style.bottom = "initial";
     accordion.style.width = parent.offsetWidth + "px";
     accordion.style.paddingRight = '30px';
-    console.log("scrollHeight"+ document.documentElement.scrollHeight);
-    console.log("Accrodion height"+ (accordion.offsetHeight+scrolled));
-    console.log(footer.offsetHeight);
   }
   else if ((document.documentElement.scrollHeight-(accordion.offsetHeight+scrolled))<=footer.offsetHeight&&window.innerWidth>991) {
-    console.log("HEY");
     accordion.style.position = 'fixed';
     accordion.style.top = 'initial';
     accordion.style.width = parent.offsetWidth + "px";
