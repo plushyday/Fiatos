@@ -35,6 +35,8 @@ $('.slider').each(function(){
   })
   var bulletArray = [];
   var currentIndex = 0;
+  $slides.eq(0).css({
+      display: 'block'});
   var timeout;
   
   function move(newIndex) {
@@ -85,7 +87,7 @@ $('.slider').each(function(){
     } else {
       move(0);
     }
-  }, 5000);
+  }, 10000);
  }
 
  $('.next_btn').on('click', function() {
@@ -179,8 +181,6 @@ svgcolor.each(function(){
 // }
 
 //SLIDE TO ANCHOR
-
-
 function anchor(){
     var Params = location.search.substring(1); 
     if(Params.split("=")[1]=="about_us"){

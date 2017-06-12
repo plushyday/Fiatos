@@ -45,12 +45,12 @@
     }
 }
 
-.slide:nth-of-type(odd) {
-  background: #D1D1D4;
+a:nth-of-type(odd) .slide {
+  background: #f5f6f5;
 }
 
-.slide:nth-of-type(even) {
-  background: #D1D1D4;
+a:nth-of-type(even) .slide{
+  background: #cddade;
 }
 
 .slide_buttons {
