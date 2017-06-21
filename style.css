@@ -947,6 +947,8 @@ a.slide_btn {
       padding-right: 5px; }
   .item-container .title {
     text-align: center; }
+  .item-container h2 {
+    font-size: 1.3em; }
 
 .breadcrumb {
   border: 1px solid #F3F3F3;
