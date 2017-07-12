@@ -1,7 +1,7 @@
 .slider-container{
   position: relative;
   // height: 400px;
-  height: calc(100vh / 1.5);
+  height: calc(100vh / 2.5);
   margin: 0;
   padding: 0;
   width: 100%;
@@ -12,7 +12,7 @@
       margin: 0 auto;
         .slide_viewer {
           // height: 400px;
-          height: calc(100vh / 1.5);
+          height: calc(100vh / 2.5);
           overflow: hidden;
           position: relative;
               .slide_group {
@@ -55,7 +55,7 @@ a:nth-of-type(even) .slide{
 
 .slide_buttons {
   left: 0;
-  top: calc(100vh / 1.5 - 60px);
+  top: calc(100vh / 2.5 - 60px);
   z-index: 100;
   position: absolute;
   right: 0;
@@ -82,7 +82,7 @@ a.slide_btn {
 }
 
 .directional_nav {
-  height: calc(100vh / 1.5 - 60px);
+  height: calc(100vh / 2.5 - 60px);
   margin: 0 auto;
   top: -340px;
 }

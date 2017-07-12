@@ -9,7 +9,9 @@
         background-color: #3c3d41;
         color: #fff;
     }
-  
+    label[for="avail"]{
+      margin-bottom: 5px !important;
+    }
     label:not(.sub-label){
       display: block; 
       max-width: none;
