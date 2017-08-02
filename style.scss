@@ -106,6 +106,12 @@ path{
   svg{
     width: 200px;
   }
+  .numbers {
+    width: 150%; 
+    @include media(760){
+        width: auto; 
+      }
+    }
  }
 .header-right{
   float: right;
@@ -324,12 +330,29 @@ path{
     fill:#3c3d41;
   }
 }
+@keyframes blink{
+  0%, 100%{
+    fill: #f5f5f5;
+  }
+  50%{
+    fill: #246484;
+  }
+}
+@keyframes blink2{
+  0%, 100%{
+    fill: #222;
+  }
+  50%{
+    fill: #f5f5f5;
+  }
+}
 #shop_basket{
     .amount-bask{
+      animation: blink 3s infinite;
           fill:lighten($fircolor, 30%); 
   }
   .text-bask{
-  fill: #fff;
+   animation: blink2 3s infinite;
   font-family:'MyriadPro';
   font-size:24px;
    }
@@ -585,7 +608,8 @@ path{
   /*   border-top: 2px solid $fircolor;*/
   /* }*/
 }
-.footer-logo{
+.footer-logo
+{
   svg{
     width: 20%;
     @include media(1800){
